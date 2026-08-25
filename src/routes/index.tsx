@@ -381,6 +381,62 @@ function Index() {
 
       <hr className="section-divider" />
 
+      {/* INVESTIMENTO */}
+      <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
+        <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Investimento</p>
+        <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 16 }}>
+          Valor do Pacote
+        </h2>
+        <p className="font-body" style={{ textAlign: "center", fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 56 }}>
+          Inclui voos, hospedagem, ingressos, seguro viagem e guia turístico · por pessoa
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 40 }}>
+          {/* Cartão */}
+          <div style={{
+            padding: "36px 32px", borderRadius: 12,
+            border: "1px solid rgba(201,169,110,0.35)",
+            background: "rgba(201,169,110,0.06)",
+            textAlign: "center"
+          }}>
+            <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Cartão de crédito</p>
+            <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>até 12x sem juros</p>
+            <p className="font-display" style={{ fontSize: 42, fontWeight: 500, color: "#f0ede8", lineHeight: 1.1, marginBottom: 4 }}>
+              12x R$ 3.703,33
+            </p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 44.439,95 por pessoa</p>
+          </div>
+
+          {/* Pix */}
+          <div style={{
+            padding: "36px 32px", borderRadius: 12,
+            border: "1px solid rgba(201,169,110,0.6)",
+            background: "rgba(201,169,110,0.10)",
+            textAlign: "center",
+            position: "relative"
+          }}>
+            <div style={{
+              position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)",
+              background: "#c9a96e", color: "#0e0e12", fontSize: 10, fontWeight: 600,
+              letterSpacing: "0.2em", textTransform: "uppercase", padding: "4px 14px", borderRadius: 20,
+              fontFamily: "'Jost', sans-serif"
+            }}>Melhor opção</div>
+            <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Pix à vista</p>
+            <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>desconto exclusivo</p>
+            <p className="font-display" style={{ fontSize: 42, fontWeight: 500, color: "#c9a96e", lineHeight: 1.1, marginBottom: 4 }}>
+              R$ 39.671,40
+            </p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 4.768,55</p>
+          </div>
+        </div>
+
+        <p className="font-body" style={{ textAlign: "center", fontSize: 11, color: "rgba(240,237,232,0.35)", lineHeight: 1.7 }}>
+          Valores por pessoa · Sujeitos a disponibilidade até a emissão · Proposta válida por 5 dias úteis
+        </p>
+      </section>
+
+      <hr className="section-divider" />
+
       {/* FOOTER */}
       <footer style={{ padding: "60px 24px 40px", textAlign: "center" }}>
         <img src={drkLogo.url} alt="DRK Viagens" style={{ height: 40, marginBottom: 20, opacity: 0.7 }} />

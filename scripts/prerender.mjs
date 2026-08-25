@@ -1,5 +1,4 @@
 import { writeFileSync } from "fs";
-import { createRequire } from "module";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -14,12 +13,33 @@ const request = new Request("http://localhost/", {
   headers: { "accept": "text/html" },
 });
 
-try {
-  const response = await server.fetch(request, {}, { waitUntil: () => {}, passThroughOnException: () => {} });
-  const html = await response.text();
-  writeFileSync(join(distClient, "index.html"), html, "utf-8");
-  console.log("✓ index.html gerado com sucesso");
-} catch (err) {
-  console.error("Erro ao gerar HTML:", err);
-  process.exit(1);
-}
+const response = await server.fetch(request, {}, { waitUntil: () => {}, passThroughOnException: () => {} });
+let html = await response.text();
+
+// Remove React JS bundles (346KB) — page is fully static, no hydration needed
+html = html.replace(/<link rel="modulepreload"[^>]*>/g, "");
+html = html.replace(/<script\b[^>]*class="\$tsr"[^>]*>[\s\S]*?<\/script>/g, "");
+html = html.replace(/<script\b[^>]*type="module"[^>]*><\/script>/g, "");
+html = html.replace(/<script\b[^>]*src="[^"]*"[^>]*><\/script>/g, "");
+
+// Fix print button — React onClick doesn't work without JS, inject plain onclick
+html = html.replace(
+  /(<button\s[^>]*Salvar PDF[^<]*<\/button>)/,
+  (match) => match.replace("<button ", '<button onclick="window.print()" ')
+);
+// Fallback: if button text is inside, target by content
+html = html.replace(
+  />Salvar PDF</,
+  (match) => match // keep as-is, handled above
+);
+
+// Add minimal script just for print button (fallback)
+html = html.replace(
+  "</body>",
+  `<script>var b=document.querySelector('button.no-print');if(b)b.onclick=function(){window.print();}</script></body>`
+);
+
+writeFileSync(join(distClient, "index.html"), html, "utf-8");
+
+const size = Math.round(html.length / 1024);
+console.log(`✓ index.html gerado — ${size}KB (sem JS de framework)`);

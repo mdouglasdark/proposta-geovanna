@@ -211,42 +211,42 @@ function Index() {
             {
               dest: "Roma", hotel: "Camplus Hotel Roma Centro", stars: 3,
               addr: "Via Montebello 8", checkin: "15 set. · 14:00", checkout: "18 set. · 10:30",
-              noites: "3 noites", quarto: "Double Standard", extras: "Café da manhã incluso"
+              noites: "3 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Veneza", hotel: "Hotel Aquarius Venice", stars: 4,
               addr: "Campo San Giacomo dell'Orio 1624", checkin: "18 set. · 15:00", checkout: "20 set. · 11:00",
-              noites: "2 noites", quarto: "Double King Comfort", extras: "Café da manhã incluso"
+              noites: "2 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Milão", hotel: "Hotel Bernina", stars: 3,
               addr: "Via Napo Torriani 27", checkin: "20 set. · 14:00", checkout: "22 set. · 11:00",
-              noites: "2 noites", quarto: "Twin Standard", extras: "Café da manhã incluso"
+              noites: "2 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "St. Moritz", hotel: "Hotel Reine Victoria", stars: 4,
               addr: "Via Rosatsch 18", checkin: "22 set. · 15:00", checkout: "24 set. · 07:00",
-              noites: "2 noites", quarto: "Quarto Casal Superior", extras: "Café da manhã incluso · Cancelamento grátis até 15/09"
+              noites: "2 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Berna", hotel: "Hotel Savoy Bern", stars: 4,
               addr: "Neuengasse 26", checkin: "24 set. · 15:00", checkout: "25 set. · 11:00",
-              noites: "1 noite", quarto: "Quarto Casal Conforto", extras: "Café da manhã incluso"
+              noites: "1 noite", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Zurique", hotel: "Mercure Zürich City", stars: 4,
               addr: "Vulkanstrasse 108b", checkin: "25 set. · 15:00", checkout: "27 set. · 12:00",
-              noites: "2 noites", quarto: "Comfort Room (2 camas)", extras: "Café da manhã incluso"
+              noites: "2 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Paris", hotel: "Mercure Paris Centre Tour Eiffel", stars: 4,
               addr: "20 Rue Jean Rey", checkin: "27 set. · 15:00", checkout: "01 out. · 12:00",
-              noites: "4 noites", quarto: "Classic Room · 1 cama de casal", extras: "Café da manhã incluso"
+              noites: "4 noites", quarto: "", extras: "Café da manhã incluso"
             },
             {
               dest: "Londres", hotel: "Park Plaza County Hall London", stars: 4,
               addr: "1 Addington Street", checkin: "01 out. · 15:00", checkout: "04 out. · 12:00",
-              noites: "3 noites", quarto: "Superior Room · 1 cama de casal", extras: "Café da manhã incluso"
+              noites: "3 noites", quarto: "", extras: "Café da manhã incluso"
             },
           ].map(({ dest, hotel, stars, addr, checkin, checkout, noites, quarto, extras }) => (
             <div key={dest} style={{ borderRadius: 8, overflow: "hidden", border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)", padding: "22px 20px" }}>
@@ -264,7 +264,7 @@ function Index() {
                   <p className="font-body" style={{ fontSize: 12 }}>{checkout}</p>
                 </div>
               </div>
-              <p className="font-body" style={{ fontSize: 11, color: "rgba(240,237,232,0.6)", marginBottom: 4 }}>{noites} · {quarto}</p>
+              <p className="font-body" style={{ fontSize: 11, color: "rgba(240,237,232,0.6)", marginBottom: 4 }}>{noites}</p>
               <p className="font-body" style={{ fontSize: 11, color: "rgba(201,169,110,0.7)" }}>{extras}</p>
             </div>
           ))}

@@ -402,9 +402,7 @@ function Index() {
               <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>Disneyland Park + Walt Disney Studios Park · 28–29 set. · 2 adultos</p>
             </div>
             <div style={{ textAlign: "right", whiteSpace: "nowrap" }}>
-              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.1em", marginBottom: 4 }}>incluso no pacote</p>
-              <p className="font-body" style={{ fontSize: 16, fontWeight: 600 }}>R$ 2.514,60</p>
-              <p className="font-body" style={{ fontSize: 10, color: "rgba(240,237,232,0.4)" }}>2 pessoas</p>
+              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.1em" }}>incluso no pacote</p>
             </div>
           </div>
         </div>

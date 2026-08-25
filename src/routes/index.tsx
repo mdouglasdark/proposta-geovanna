@@ -28,7 +28,7 @@ function Index() {
       <section style={{ position: "relative", height: "100vh", minHeight: 600, display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=85')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&q=75')",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.35)"
         }} />
@@ -91,52 +91,54 @@ function Index() {
           {[
             {
               name: "Toscana", dates: "11–15 set.", nights: "4 noites",
-              img: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=400&q=70",
               desc: "Casamento de Larissa & Isac. Colinas, vinhedos e a alma da Itália."
             },
             {
               name: "Roma & Vaticano", dates: "15–18 set.", nights: "3 noites",
-              img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=70",
               desc: "Coliseu, Vaticano, Fontana di Trevi e a história milenar da Cidade Eterna."
             },
             {
               name: "Veneza", dates: "18–20 set.", nights: "2 noites",
-              img: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=400&q=70",
               desc: "Gôndolas, pontes históricas e a magia única da cidade sobre a água."
             },
             {
               name: "Milão", dates: "20–22 set.", nights: "2 noites",
-              img: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=400&q=70",
               desc: "Capital da moda e do design. Duomo, Galleria Vittorio Emanuele II e porta de entrada para os Alpes."
             },
             {
               name: "St. Moritz", dates: "22–24 set.", nights: "2 noites",
-              img: "https://images.unsplash.com/photo-1551524163-f1e6b80e2b31?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=70",
               desc: "Chegada pela lendária Linha do Bernina. Aldeia alpina a 1.856m, neve, lagos e céu estrelado."
             },
             {
               name: "Berna", dates: "24–25 set.", nights: "1 noite",
-              img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400&q=70",
               desc: "Capital suíça medieval, cidade velha com arcadas medievais, relógio astronômico e base para day trips."
             },
             {
               name: "Zurique", dates: "25–27 set.", nights: "2 noites",
-              img: "https://images.unsplash.com/photo-1620976038935-fac0720f98f6?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=400&q=70",
               desc: "Cidade medieval às margens do Limmat. Bahnhofstrasse, Lago de Zurique e elegância suíça antes de Paris."
             },
             {
               name: "Paris", dates: "27 set.–01 out.", nights: "4 noites",
-              img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&q=70",
               desc: "Torre Eiffel, Louvre, Champs-Élysées e 2 dias de pura magia na Disneyland."
             },
             {
               name: "Londres", dates: "01–04 out.", nights: "3 noites",
-              img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80",
+              img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=70",
               desc: "Big Ben, Tower Bridge, West End, lojinhas e a vida urbana britânica. Encerramento da viagem."
             },
           ].map(({ name, dates, nights, img, desc }) => (
             <div key={name} style={{ borderRadius: 8, overflow: "hidden", border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}>
-              <div style={{ height: 180, backgroundImage: `url('${img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+              <div style={{ height: 180, overflow: "hidden" }}>
+                <img src={img} alt={name} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+              </div>
               <div style={{ padding: "20px 18px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
                   <h3 className="font-display" style={{ fontSize: 20, fontWeight: 500 }}>{name}</h3>

@@ -1,626 +1,317 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Plane,
-  MapPin,
-  CalendarDays,
-  Clock,
-  CreditCard,
-  Wallet,
-  Download,
-  Globe,
-  Mountain,
-  Landmark,
-  TreePine,
-  Sun,
-} from "lucide-react";
+
+export const Route = createFileRoute("/")({
+  component: Index,
+});
 
 const drkLogo = { url: "/drk-logo.png" };
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Itália · Nepal · Butão · Índia · DRK Viagens" },
-      { name: "description", content: "Prévia de roteiro aéreo — Itália, Nepal, Butão e Índia. Proposta exclusiva para Fernanda Santoro · DRK Viagens." },
-      { property: "og:title", content: "Itália · Nepal · Butão · Índia · DRK Viagens" },
-      { property: "og:description", content: "Uma jornada de 23 dias pelos destinos mais exclusivos do planeta. Proposta exclusiva para Fernanda Santoro." },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:type", content: "website" },
-    ],
-  }),
-  component: Proposal,
-});
-
-// ─── Destination Data ──────────────────────────────────────────────────────────
-
-const destinations = [
-  {
-    flag: "🇮🇹",
-    country: "Itália",
-    city: "Roma · Chegada 23/out",
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80",
-    color: "#8B4513",
-    gradient: "from-amber-900/80 to-red-900/60",
-    icon: Landmark,
-    highlights: ["Coliseu e Fórum Romano", "Vaticano e Capela Sistina", "Fontana di Trevi", "Campo de' Fiori", "Gastronomia romana"],
-    stay: "22/out – 03/nov · ~11 dias",
-  },
-  {
-    flag: "🇳🇵",
-    country: "Nepal",
-    city: "Katmandu · Chegada 04/nov",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
-    color: "#1a4a2e",
-    gradient: "from-green-900/80 to-emerald-800/60",
-    icon: Mountain,
-    highlights: ["Boudhanath Stupa", "Pashupatinath Temple", "Durbar Square", "Vista do Everest", "Mercados de Thamel"],
-    stay: "04 – 06/nov · 2 dias",
-  },
-  {
-    flag: "🇧🇹",
-    country: "Butão",
-    city: "Paro · Chegada 06/nov",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
-    color: "#2d4a1e",
-    gradient: "from-green-900/80 to-teal-800/60",
-    icon: TreePine,
-    highlights: ["Tiger's Nest · Paro Taktsang", "Punakha Dzong", "Thimphu · Capital Real", "Natureza intocada", "Cultura e budismo tibetano"],
-    stay: "06 – 09/nov · 3 dias",
-  },
-  {
-    flag: "🇮🇳",
-    country: "Índia",
-    city: "Nova Delhi · Chegada 09/nov",
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80",
-    color: "#7B3F00",
-    gradient: "from-orange-900/80 to-yellow-900/60",
-    icon: Sun,
-    highlights: ["Taj Mahal · Agra", "Índia Gate", "Lotus Temple", "Qutb Minar", "Mercados de Old Delhi"],
-    stay: "09 – 13/nov · 4 dias",
-  },
-];
-
-// ─── Itinerary Data ────────────────────────────────────────────────────────────
-
-type DayItem = { time?: string; title: string; desc: string };
-type ItinDay = { date: string; weekday: string; flag: string; country: string; items: DayItem[] };
-
-const itinerary: ItinDay[] = [
-  // NEPAL
-  {
-    date: "04/nov", weekday: "Quarta", flag: "🇳🇵", country: "Nepal",
-    items: [
-      { time: "Manhã", title: "Chegada em Katmandu", desc: "Desembarque, transfer ao hotel, check-in e ambientação." },
-      { time: "Tarde", title: "Thamel", desc: "Primeiro contato com a vibrante vida local — lojas, cafés e a energia única da cidade." },
-      { time: "Noite", title: "Jantar nepalês", desc: "Culinária local com pratos típicos como Dal Bhat e Momo." },
-    ],
-  },
-  {
-    date: "05/nov", weekday: "Quinta", flag: "🇳🇵", country: "Nepal",
-    items: [
-      { time: "Manhã", title: "Boudhanath Stupa", desc: "Um dos maiores stupas budistas do mundo — Patrimônio UNESCO. Ritual de circuambulação com monges." },
-      { time: "Tarde", title: "Pashupatinath Temple", desc: "Templo hindu à beira do rio Bagmati, sagrado para os devotos de Shiva. Cremações sagradas às margens do rio." },
-      { time: "Final do dia", title: "Durbar Square", desc: "Praça histórica com palácios, templos e estátuas medievais no coração de Katmandu." },
-    ],
-  },
-  {
-    date: "06/nov", weekday: "Sexta", flag: "🇳🇵", country: "Nepal",
-    items: [
-      { time: "Manhã cedo", title: "Transfer ao aeroporto", desc: "Partida para Paro, Butão — voo cênico sobre os Himalaias." },
-    ],
-  },
-  // BUTÃO
-  {
-    date: "06/nov", weekday: "Sexta", flag: "🇧🇹", country: "Butão",
-    items: [
-      { time: "Tarde", title: "Chegada em Paro", desc: "Um dos aeroportos mais desafiadores do mundo, cercado por montanhas. Transfer e check-in." },
-      { time: "Final do dia", title: "Museu Nacional de Paro", desc: "Acervo de 2.000 anos de história e cultura butanesa em uma antiga torre de vigia." },
-    ],
-  },
-  {
-    date: "07/nov", weekday: "Sábado", flag: "🇧🇹", country: "Butão",
-    items: [
-      { time: "Manhã", title: "Tiger's Nest · Paro Taktsang", desc: "A trilha mais icônica do Butão — monastério agarrado a um penhasco a 3.120m de altitude. ~4h de caminhada." },
-      { time: "Tarde", title: "Descanso e contemplação", desc: "Vista panorâmica dos vales de Paro. Tarde livre para absorver a paz única do país da felicidade." },
-    ],
-  },
-  {
-    date: "08/nov", weekday: "Domingo", flag: "🇧🇹", country: "Butão",
-    items: [
-      { time: "Manhã", title: "Punakha Dzong", desc: "Fortaleza-monastério do século XVII na confluência de dois rios sagrados — considerada a mais bela do Butão." },
-      { time: "Tarde", title: "Aldeia de Lobesa", desc: "Passeio por campos de arroz e visita ao Templo da Fertilidade, um dos mais inusitados do país." },
-      { time: "Noite", title: "Jantar tradicional", desc: "Culinária butanesa com Ema Datshi (pimenta com queijo) e chá de manteiga de yak." },
-    ],
-  },
-  {
-    date: "09/nov", weekday: "Segunda", flag: "🇧🇹", country: "Butão",
-    items: [
-      { time: "Manhã cedo", title: "Transfer ao aeroporto", desc: "Partida para Nova Delhi, Índia." },
-    ],
-  },
-  // ÍNDIA
-  {
-    date: "09/nov", weekday: "Segunda", flag: "🇮🇳", country: "Índia",
-    items: [
-      { time: "Tarde", title: "Chegada em Nova Delhi", desc: "Transfer ao hotel, check-in. Ambientação na capital indiana." },
-      { time: "Final do dia", title: "India Gate e Rajpath", desc: "Passeio pelo coração cívico de Delhi — o grande arco do Memorial de Guerra e a Avenida das Cortes." },
-    ],
-  },
-  {
-    date: "10/nov", weekday: "Terça", flag: "🇮🇳", country: "Índia",
-    items: [
-      { time: "Manhã", title: "Old Delhi", desc: "Red Fort (Patrimônio UNESCO) e Jama Masjid — uma das maiores mesquitas da Índia." },
-      { time: "Tarde", title: "Chandni Chowk", desc: "Mergulho no mercado mais famoso de Delhi — especiarias, jóias, tecidos e street food inesquecível." },
-      { time: "Final do dia", title: "Lotus Temple", desc: "Templo Bahá'í em forma de flor de lótus — uma das construções mais fotografadas do mundo." },
-    ],
-  },
-  {
-    date: "11/nov", weekday: "Quarta", flag: "🇮🇳", country: "Índia",
-    items: [
-      { time: "Madrugada", title: "Partida para Agra", desc: "Saída às 5h para chegar ao Taj Mahal ao amanhecer — o momento mais especial da visita." },
-      { time: "Manhã", title: "Taj Mahal", desc: "Uma das 7 Maravilhas do Mundo. Tempo livre para contemplar e fotografar o mausoléu de mármore branco." },
-      { time: "Tarde", title: "Agra Fort e retorno", desc: "Visita à fortaleza de Akbar e retorno a Delhi à noite." },
-    ],
-  },
-  {
-    date: "12/nov", weekday: "Quinta", flag: "🇮🇳", country: "Índia",
-    items: [
-      { time: "Manhã", title: "Qutb Minar", desc: "Minarete do século XII, Patrimônio UNESCO — o mais alto do mundo em tijolos." },
-      { time: "Tarde", title: "Humayun's Tomb e Hauz Khas", desc: "Mausoléu mogol e o charmoso bairro de lagos e boutiques de design." },
-      { time: "Noite", title: "Jantar de despedida", desc: "Restaurante de alta gastronomia indiana para encerrar com elegância a jornada." },
-    ],
-  },
-  {
-    date: "13/nov", weekday: "Sexta", flag: "🇮🇳", country: "Índia",
-    items: [
-      { time: "Madrugada", title: "Transfer ao aeroporto", desc: "Partida de Nova Delhi às 01h55 rumo ao Brasil via Munique e São Paulo." },
-    ],
-  },
-];
-
-// ─── Flight Data ───────────────────────────────────────────────────────────────
-
-type Leg = {
-  date: string;
-  from: { time: string; code: string; name: string };
-  to: { time: string; code: string; name: string };
-  duration: string;
-  airline: string;
-  flight: string;
-  aircraft: string;
-  stop?: string;
-};
-
-type Trecho = {
-  label: string;
-  origin: string;
-  destination: string;
-  flag: string;
-  legs: Leg[];
-};
-
-const trechos: Trecho[] = [
-  {
-    label: "Trecho 1",
-    origin: "Brasil",
-    destination: "Itália",
-    flag: "🇧🇷 → 🇮🇹",
-    legs: [
-      {
-        date: "Qui., 22 de outubro",
-        from: { time: "17:10", code: "BSB", name: "Brasília · Presidente Juscelino" },
-        to: { time: "06:20 +1", code: "LIS", name: "Lisboa · Humberto Delgado" },
-        duration: "9h10",
-        airline: "TAP Air Portugal",
-        flight: "TP 58",
-        aircraft: "Airbus A330-900neo",
-        stop: "Escala 2h15 em Lisboa (LIS)",
-      },
-      {
-        date: "Sex., 23 de outubro",
-        from: { time: "08:35", code: "LIS", name: "Lisboa · Humberto Delgado" },
-        to: { time: "12:35", code: "FCO", name: "Roma · Internacional" },
-        duration: "3h",
-        airline: "TAP Air Portugal",
-        flight: "TP 832",
-        aircraft: "Airbus A320neo",
-      },
-    ],
-  },
-  {
-    label: "Trecho 2",
-    origin: "Itália",
-    destination: "Nepal",
-    flag: "🇮🇹 → 🇳🇵",
-    legs: [
-      {
-        date: "Ter., 3 de novembro",
-        from: { time: "12:00", code: "FCO", name: "Roma · Internacional" },
-        to: { time: "05:30 +1", code: "TFU", name: "Chengdu · Tianfu International" },
-        duration: "10h30",
-        airline: "Sichuan Airlines",
-        flight: "3U 3896",
-        aircraft: "Airbus A330",
-        stop: "Escala 3h35 em Chengdu (TFU)",
-      },
-      {
-        date: "Qua., 4 de novembro",
-        from: { time: "09:05", code: "TFU", name: "Chengdu · Tianfu International" },
-        to: { time: "11:20", code: "KTM", name: "Katmandu · Tribhuvan International" },
-        duration: "4h30",
-        airline: "Sichuan Airlines",
-        flight: "3U 3901",
-        aircraft: "Airbus A320",
-      },
-    ],
-  },
-  {
-    label: "Trecho 3",
-    origin: "Nepal",
-    destination: "Butão",
-    flag: "🇳🇵 → 🇧🇹",
-    legs: [
-      {
-        date: "Sex., 6 de novembro",
-        from: { time: "09:10", code: "KTM", name: "Katmandu · Tribhuvan International" },
-        to: { time: "10:30", code: "PBH", name: "Paro · Internacional" },
-        duration: "1h05",
-        airline: "Druk Air",
-        flight: "KB 401",
-        aircraft: "Airbus A319 sharklets",
-      },
-    ],
-  },
-  {
-    label: "Trecho 4",
-    origin: "Butão",
-    destination: "Índia",
-    flag: "🇧🇹 → 🇮🇳",
-    legs: [
-      {
-        date: "Seg., 9 de novembro",
-        from: { time: "09:40", code: "PBH", name: "Paro · Internacional" },
-        to: { time: "11:30", code: "DEL", name: "Nova Delhi · Indira Gandhi" },
-        duration: "2h20",
-        airline: "Druk Air",
-        flight: "KB 200",
-        aircraft: "Airbus A319",
-      },
-    ],
-  },
-  {
-    label: "Trecho 5",
-    origin: "Índia",
-    destination: "Brasil",
-    flag: "🇮🇳 → 🇧🇷",
-    legs: [
-      {
-        date: "Sex., 13 de novembro",
-        from: { time: "01:55", code: "DEL", name: "Nova Delhi · Indira Gandhi" },
-        to: { time: "06:00", code: "MUC", name: "Munique · Franz Josef Strauss" },
-        duration: "8h35",
-        airline: "Lufthansa",
-        flight: "LH 763",
-        aircraft: "Airbus A380",
-        stop: "Escala 5h55 em Munique (MUC)",
-      },
-      {
-        date: "Sex., 13 de novembro",
-        from: { time: "11:55", code: "MUC", name: "Munique · Franz Josef Strauss" },
-        to: { time: "20:25", code: "GRU", name: "São Paulo · Guarulhos" },
-        duration: "12h30",
-        airline: "Lufthansa",
-        flight: "LH 504",
-        aircraft: "Airbus A350",
-        stop: "Escala 2h40 em São Paulo (GRU)",
-      },
-      {
-        date: "Sáb., 14 de novembro",
-        from: { time: "23:05", code: "GRU", name: "São Paulo · Guarulhos" },
-        to: { time: "00:50 +1", code: "BSB", name: "Brasília · Presidente Juscelino" },
-        duration: "1h45",
-        airline: "LATAM Airlines Brasil",
-        flight: "LA 4535",
-        aircraft: "Airbus A319",
-      },
-    ],
-  },
-];
-
-// ─── Components ─────────────────────────────────────────────────────────────────
-
-function LegCard({ leg }: { leg: Leg }) {
+function Index() {
   return (
-    <div>
-      <div className="rounded-xl border border-border bg-secondary/30 p-5">
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs text-muted-foreground">{leg.date}</span>
-          <span className="text-xs text-muted-foreground">{leg.airline} · {leg.flight} · {leg.aircraft}</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="flex-1">
-            <p className="text-3xl font-bold">{leg.from.time}</p>
-            <p className="text-sm font-semibold">{leg.from.code}</p>
-            <p className="text-xs text-muted-foreground">{leg.from.name}</p>
-          </div>
-          <div className="flex flex-1 flex-col items-center gap-1 text-muted-foreground">
-            <Plane className="h-4 w-4 text-primary" />
-            <span className="h-px w-full bg-border" />
-            <span className="text-xs">{leg.duration}</span>
-          </div>
-          <div className="flex-1 text-right">
-            <p className="text-3xl font-bold">{leg.to.time}</p>
-            <p className="text-sm font-semibold">{leg.to.code}</p>
-            <p className="text-xs text-muted-foreground">{leg.to.name}</p>
-          </div>
-        </div>
-      </div>
-      {leg.stop && (
-        <div className="my-2 flex items-center gap-3 px-2">
-          <span className="h-px flex-1 border-t border-dashed border-border" />
-          <span className="text-xs text-muted-foreground">{leg.stop}</span>
-          <span className="h-px flex-1 border-t border-dashed border-border" />
-        </div>
-      )}
-    </div>
-  );
-}
-
-// ─── Main ───────────────────────────────────────────────────────────────────────
-
-function Proposal() {
-  return (
-    <main className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen font-sans" style={{ background: "#0e0e12", color: "#f0ede8" }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0e0e12; }
+        .font-display { font-family: 'Cormorant Garamond', serif; }
+        .font-body { font-family: 'Jost', sans-serif; }
+        .gold { color: #c9a96e; }
+        .gold-border { border-color: #c9a96e; }
+        .section-divider { border: none; border-top: 1px solid rgba(201,169,110,0.25); margin: 0; }
+        @media print {
+          .no-print { display: none !important; }
+          body { background: white !important; color: #111 !important; }
+        }
+      `}</style>
 
       {/* HERO */}
-      <header className="relative flex min-h-screen flex-col justify-end overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85"
-          alt="Himalaias ao amanhecer"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to top, rgba(5,8,20,0.97) 0%, rgba(5,8,20,0.6) 50%, rgba(5,8,20,0.2) 100%)" }}
-        />
+      <section style={{ position: "relative", height: "100vh", minHeight: 600, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=85')",
+          backgroundSize: "cover", backgroundPosition: "center",
+          filter: "brightness(0.35)"
+        }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(14,14,18,0.2) 0%, rgba(14,14,18,0.7) 100%)" }} />
 
-        <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-32">
-          <div className="animate-fade-up">
-            <div className="mb-8 flex items-center gap-4">
-              <img src={drkLogo.url} alt="DRK Viagens" className="h-14 w-auto" />
-              <span className="h-px w-16 bg-border" />
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Prévia de roteiro · Aéreo</span>
-            </div>
+        <div style={{ position: "relative", textAlign: "center", padding: "0 24px", maxWidth: 800 }}>
+          <img src={drkLogo.url} alt="DRK Viagens" style={{ height: 56, marginBottom: 40, opacity: 0.95 }} />
 
-            <div className="mb-4 flex flex-wrap gap-3 text-2xl">
-              <span>🇮🇹</span>
-              <span className="text-muted-foreground">·</span>
-              <span>🇳🇵</span>
-              <span className="text-muted-foreground">·</span>
-              <span>🇧🇹</span>
-              <span className="text-muted-foreground">·</span>
-              <span>🇮🇳</span>
-            </div>
+          <p className="font-body gold" style={{ letterSpacing: "0.35em", fontSize: 11, textTransform: "uppercase", marginBottom: 20 }}>
+            Proposta exclusiva · Geovanna
+          </p>
 
-            <h1 className="max-w-4xl text-5xl font-bold leading-[0.95] md:text-7xl">
-              Itália · Nepal
-              <span className="block text-gradient">Butão · Índia</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Uma jornada de 23 dias pelos destinos mais exclusivos e fascinantes do planeta — da Roma Imperial aos Himalaias sagrados.
-            </p>
+          <h1 className="font-display" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontWeight: 500, lineHeight: 1.08, marginBottom: 24 }}>
+            Europa<br />
+            <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Memorável</em>
+          </h1>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              {[
-                { icon: MapPin, text: "Fernanda Santoro" },
-                { icon: CalendarDays, text: "22 out – 14 nov de 2025" },
-                { icon: Globe, text: "4 países · 5 trechos aéreos" },
-                { icon: Clock, text: "23 dias de jornada" },
-              ].map(({ icon: Icon, text }) => (
-                <span key={text} className="inline-flex items-center gap-2 rounded-full border border-border glass px-4 py-2 text-sm font-medium">
-                  <Icon className="h-4 w-4 text-primary" />
-                  {text}
-                </span>
-              ))}
-            </div>
+          <p className="font-body" style={{ fontSize: 15, color: "rgba(240,237,232,0.7)", letterSpacing: "0.06em", marginBottom: 40 }}>
+            Toscana · Roma · Veneza · Milão · St. Moritz · Berna · Zurique · Paris · Londres
+          </p>
+
+          <div style={{ display: "flex", justifyContent: "center", gap: 32, flexWrap: "wrap" }}>
+            {[
+              { label: "Início", value: "11 set." },
+              { label: "Fim", value: "04 out." },
+              { label: "Duração", value: "23 dias" },
+              { label: "Passageiros", value: "2 adultos" },
+            ].map(({ label, value }) => (
+              <div key={label} style={{ textAlign: "center" }}>
+                <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.2em", color: "#c9a96e", textTransform: "uppercase", marginBottom: 4 }}>{label}</p>
+                <p className="font-display" style={{ fontSize: 22, fontWeight: 500 }}>{value}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </header>
+
+        <button
+          className="no-print"
+          onClick={() => window.print()}
+          style={{
+            position: "absolute", top: 24, right: 24,
+            background: "rgba(201,169,110,0.15)", border: "1px solid rgba(201,169,110,0.4)",
+            color: "#c9a96e", padding: "8px 18px", borderRadius: 4,
+            fontFamily: "'Jost', sans-serif", fontSize: 12, letterSpacing: "0.1em",
+            cursor: "pointer", textTransform: "uppercase"
+          }}
+        >
+          Salvar PDF
+        </button>
+      </section>
 
       {/* DESTINOS */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
-        <div className="mb-12 max-w-2xl">
-          <span className="text-gradient text-sm font-semibold uppercase tracking-[0.25em]">Os destinos</span>
-          <h2 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">
-            Quatro mundos, uma <span className="text-gradient">jornada</span>
-          </h2>
-        </div>
+      <section style={{ padding: "80px 24px", maxWidth: 1100, margin: "0 auto" }}>
+        <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Roteiro</p>
+        <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 56 }}>
+          9 Destinos · 23 Dias
+        </h2>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {destinations.map((dest) => (
-            <div key={dest.country} className="group relative overflow-hidden rounded-2xl border border-border">
-              <div className="relative h-56 w-full overflow-hidden">
-                <img
-                  src={dest.image}
-                  alt={dest.country}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-t ${dest.gradient}`} />
-                <div className="absolute bottom-4 left-4">
-                  <p className="text-3xl">{dest.flag}</p>
-                  <h3 className="text-2xl font-bold text-white">{dest.country}</h3>
-                  <p className="text-sm text-white/70">{dest.city}</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 16 }}>
+          {[
+            {
+              name: "Toscana", dates: "11–15 set.", nights: "4 noites",
+              img: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80",
+              desc: "Casamento de Larissa & Isac. Colinas, vinhedos e a alma da Itália."
+            },
+            {
+              name: "Roma & Vaticano", dates: "15–18 set.", nights: "3 noites",
+              img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80",
+              desc: "Coliseu, Vaticano, Fontana di Trevi e a história milenar da Cidade Eterna."
+            },
+            {
+              name: "Veneza", dates: "18–20 set.", nights: "2 noites",
+              img: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=600&q=80",
+              desc: "Gôndolas, pontes históricas e a magia única da cidade sobre a água."
+            },
+            {
+              name: "Milão", dates: "20–22 set.", nights: "2 noites",
+              img: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=600&q=80",
+              desc: "Capital da moda e do design. Duomo, Galleria Vittorio Emanuele II e porta de entrada para os Alpes."
+            },
+            {
+              name: "St. Moritz", dates: "22–24 set.", nights: "2 noites",
+              img: "https://images.unsplash.com/photo-1551524163-f1e6b80e2b31?w=600&q=80",
+              desc: "Chegada pela lendária Linha do Bernina. Aldeia alpina a 1.856m, neve, lagos e céu estrelado."
+            },
+            {
+              name: "Berna", dates: "24–25 set.", nights: "1 noite",
+              img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=600&q=80",
+              desc: "Capital suíça medieval, cidade velha com arcadas medievais, relógio astronômico e base para day trips."
+            },
+            {
+              name: "Zurique", dates: "25–27 set.", nights: "2 noites",
+              img: "https://images.unsplash.com/photo-1620976038935-fac0720f98f6?w=600&q=80",
+              desc: "Cidade medieval às margens do Limmat. Bahnhofstrasse, Lago de Zurique e elegância suíça antes de Paris."
+            },
+            {
+              name: "Paris", dates: "27 set.–01 out.", nights: "4 noites",
+              img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80",
+              desc: "Torre Eiffel, Louvre, Champs-Élysées e 2 dias de pura magia na Disneyland."
+            },
+            {
+              name: "Londres", dates: "01–04 out.", nights: "3 noites",
+              img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80",
+              desc: "Big Ben, Tower Bridge, West End, lojinhas e a vida urbana britânica. Encerramento da viagem."
+            },
+          ].map(({ name, dates, nights, img, desc }) => (
+            <div key={name} style={{ borderRadius: 8, overflow: "hidden", border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}>
+              <div style={{ height: 180, backgroundImage: `url('${img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+              <div style={{ padding: "20px 18px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+                  <h3 className="font-display" style={{ fontSize: 20, fontWeight: 500 }}>{name}</h3>
+                  <span className="font-body gold" style={{ fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap", marginLeft: 8 }}>{nights}</span>
                 </div>
-                <div className="absolute right-4 top-4 rounded-full bg-black/30 px-3 py-1 text-xs text-white/80 backdrop-blur-sm">
-                  {dest.stay}
-                </div>
-              </div>
-              <div className="bg-card p-5">
-                <ul className="space-y-1.5">
-                  {dest.highlights.map((h) => (
-                    <li key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
+                <p className="font-body" style={{ fontSize: 11, color: "#c9a96e", letterSpacing: "0.1em", marginBottom: 8 }}>{dates}</p>
+                <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.6)", lineHeight: 1.55 }}>{desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ROTEIRO DIA A DIA */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-20 md:pb-28">
-        <div className="mb-12 max-w-2xl">
-          <span className="text-gradient text-sm font-semibold uppercase tracking-[0.25em]">Roteiro</span>
-          <h2 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">
-            Dia a <span className="text-gradient">dia</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground">Nepal · Butão · Índia — 10 dias de imersão cultural.</p>
-        </div>
+      <hr className="section-divider" />
 
-        {(["🇳🇵", "🇧🇹", "🇮🇳"] as const).map((flag) => {
-          const days = itinerary.filter((d) => d.flag === flag);
-          const countryName = days[0]?.country;
-          return (
-            <div key={flag} className="mb-12">
-              <div className="mb-5 flex items-center gap-3">
-                <span className="text-3xl">{flag}</span>
-                <h3 className="text-2xl font-bold">{countryName}</h3>
-                <span className="h-px flex-1 bg-border" />
+      {/* LOGÍSTICA DE TRANSPORTE */}
+      <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
+        <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Mobilidade</p>
+        <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 56 }}>
+          Aéreo & Ferroviário
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {[
+            { tipo: "✈", label: "Voo Internacional", trecho: "GRU → FCO", data: "Sex., 11 set.", horario: "14:15 → 06:50+1", operadora: "ITA Airways · AZ 675 · Airbus A330-900neo" },
+            { tipo: "🚄", label: "Trem Intercity", trecho: "Pisa → Roma", data: "Ter., 15 set.", horario: "11:11 → 14:33", operadora: "Trenitalia · IC 505 · Pisa Centrale → Roma Termini · 3h22min" },
+            { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Roma → Veneza", data: "Sex., 18 set.", horario: "12:58 → 16:42", operadora: "Italo · Nº 8916 · Roma Tiburtina → Venice Mestre · 3h44min" },
+            { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },
+            { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "06:20 → 08:52", operadora: "Trenord · Nº 2812 · Milano Centrale → Tirano · 2h32min" },
+            { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "10:06 → 12:35", operadora: "Ferrovia Rética · Nº 972 · travessia alpina a 2.253m · 2h29min" },
+            { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 3 trens · 4h11min" },
+            { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sex., 25 set.", horario: "13:02 → 13:58", operadora: "SBB · IC Nº 819 · Bern → Zürich HB · 56min" },
+            { tipo: "✈", label: "Voo", trecho: "Zurique → Paris", data: "Dom., 27 set.", horario: "12:40 → 14:00", operadora: "SWISS · LX 638 · ZRH → CDG · Airbus A220-300 · 1h20min" },
+            { tipo: "🚄", label: "Eurostar", trecho: "Paris → Londres", data: "Qui., 01 out.", horario: "14:30 → 16:05", operadora: "Eurostar · Nº 9037 · Paris Gare du Nord → London St Pancras · 2h35min" },
+            { tipo: "✈", label: "Voo", trecho: "Londres → Lisboa", data: "Dom., 04 out.", horario: "16:35 → 19:25", operadora: "TAP Air Portugal · TP 1361 · LHR → LIS · Airbus A320neo · 2h50min" },
+          ].map(({ tipo, label, trecho, data, horario, operadora }, i) => (
+            <div key={i} style={{
+              display: "grid", gridTemplateColumns: "48px 1fr auto",
+              gap: 16, alignItems: "center",
+              padding: "18px 20px", borderRadius: 8,
+              background: "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.07)"
+            }}>
+              <div style={{ fontSize: 22, textAlign: "center" }}>{tipo}</div>
+              <div>
+                <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{label}</p>
+                <p className="font-display" style={{ fontSize: 18, fontWeight: 500, marginBottom: 4 }}>{trecho}</p>
+                <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>{operadora}</p>
               </div>
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {days.map((day, i) => (
-                  <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-elegant)]">
-                    <div className="mb-4 flex items-baseline justify-between">
-                      <span className="text-xl font-bold text-gradient">{day.date}</span>
-                      <span className="text-xs uppercase tracking-widest text-muted-foreground">{day.weekday}</span>
+              <div style={{ textAlign: "right" }}>
+                <p className="font-body" style={{ fontSize: 12, color: "#c9a96e", marginBottom: 4 }}>{data}</p>
+                <p className="font-body" style={{ fontSize: 13, fontWeight: 500 }}>{horario}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* ITINERÁRIO DIA A DIA */}
+      <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
+        <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Dia a Dia</p>
+        <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 56 }}>
+          Roteiro Completo
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+          {[
+            {
+              dest: "Toscana", color: "#7a5c38",
+              days: [
+                { date: "11–12 set.", title: "Chegada à Toscana", desc: "Voo noturno GRU→FCO. Chegada em Roma pela manhã e traslado para a Toscana — região central da Itália famosa pelas colinas onduladas, ciprestes, vinhedos do Chianti e cidades medievais como Siena e San Gimignano. Check-in e descanso." },
+                { date: "13–14 set.", title: "Casamento Larissa & Isac", desc: "Dia livre para explorar a região: Florença, capital da Toscana, guarda o Duomo (maior catedral de cúpula do mundo na época da construção), a Galeria Uffizi com obras de Botticelli e Michelangelo, e a Ponte Vecchio sobre o rio Arno. À tarde/noite do dia 14, celebração do casamento." },
+                { date: "15 set.", title: "Partida para Roma", desc: "Manhã livre na Toscana. Trem Intercity Nº 505 da Trenitalia saindo de Pisa Centrale — cidade da famosa Torre Inclinada — às 11:11, chegando em Roma Termini às 14:33. Check-in e primeiros passos pela cidade." },
+              ]
+            },
+            {
+              dest: "Roma & Vaticano", color: "#5c3d2e",
+              days: [
+                { date: "15 set.", title: "Roma Antiga à Tarde", desc: "Fontana di Trevi: a maior fonte barroca do mundo, tradição de jogar moeda para garantir o retorno. Piazza Navona: praça oval construída sobre um estádio romano, com fontes do Bernini. Campo de' Fiori: praça animada com mercado e bares. Jantar em Trastevere, o bairro boêmio e autêntico de Roma." },
+                { date: "16 set.", title: "Vaticano & Coliseu", desc: "Museus Vaticanos: coleção de arte de 2.000 anos, encerrada na Capela Sistina com o teto pintado por Michelangelo. Basílica de São Pedro: maior igreja do mundo cristão. Coliseu: anfiteatro romano do século I d.C., palco de gladiadores, com capacidade para 80.000 espectadores. Foro Romano: coração político da Roma Antiga." },
+                { date: "17 set.", title: "Roma Livre", desc: "Villa Borghese: galeria de arte com esculturas de Bernini em meio a um parque arborizado. Bairro Prati para almoço. Castelo de Sant'Angelo às margens do Tibre — fortaleza do século II que serviu de mausoléu imperial, castelo medieval e prisão papal. Jantar de despedida com cacio e pepe e tiramisu autêntico." },
+                { date: "18 set.", title: "Partida para Veneza", desc: "Trem Italo Nº 8916 saindo de Roma Tiburtina às 12:58, chegando em Venice Mestre às 16:42 (3h44min). Traslado de barco-táxi pelo Grande Canal ao hotel em Veneza." },
+              ]
+            },
+            {
+              dest: "Veneza", color: "#2e3f5c",
+              days: [
+                { date: "18 set.", title: "Chegada a Veneza", desc: "Veneza é uma cidade construída sobre 118 ilhas ligadas por 400 pontes — sem carros, com barcos como transporte. Traslado de barco-táxi pelo Grande Canal ao hotel. Jantar à beira da água e primeiros passos pela Piazza San Marco." },
+                { date: "19 set.", title: "Veneza Clássica & Ilhas", desc: "Basílica de São Marcos: catedral de estilo bizantino coberta por mosaicos dourados. Palazzo Ducale: palácio gótico, centro do poder da República de Veneza por 1.000 anos. Gôndola pelos canais. Tarde: vaporetto para Murano (vidro soprado artesanal) e Burano (casinhas coloridas e renda feita à mão)." },
+                { date: "20 set.", title: "Partida para Milão", desc: "Trem Italo Nº 8984 saindo de Venezia S. Lucia às 13:57, chegando em Milano Centrale às 16:25 (2h28min). Check-in e passeio noturno pelo bairro Navigli." },
+              ]
+            },
+            {
+              dest: "Milão", color: "#5c4a2e",
+              days: [
+                { date: "20 set.", title: "Chegada a Milão — Navigli", desc: "Milão é a capital mundial da moda e do design. Tarde no bairro Navigli — canais históricos do séc. XV, bares e restaurantes com aperitivo milanês, tradição única da cidade com petiscos gratuitos servidos com as bebidas a partir das 18h." },
+                { date: "21 set.", title: "Milão Clássico", desc: "Duomo di Milano: catedral gótica com 135 torres e capacidade para 40.000 pessoas — a maior da Itália. Galleria Vittorio Emanuele II: galeria coberta de 1877, com mosaicos e as lojas mais exclusivas do mundo (Prada, Gucci, Louis Vuitton). Brera: bairro artístico com galerias e ateliês. La Scala: o teatro de ópera mais famoso do mundo (fachada e museu)." },
+                { date: "22 set.", title: "Partida pela Linha do Bernina", desc: "Cedo: trem Trenord Nº 2812 saindo de Milano Centrale às 06:20, chegando em Tirano às 08:52. Em Tirano, janela de 1h14min: visita ao Santuário della Madonna di Tirano, ao lado da estação. Às 10:06, embarque no Bernina Express Nº 972 — a viagem de trem mais espetacular da Europa." },
+              ]
+            },
+            {
+              dest: "St. Moritz · Bernina Express", color: "#4a5c6a",
+              days: [
+                { date: "22 set.", title: "Bernina Express — Topo dos Alpes", desc: "A Linha do Bernina (Ferrovia Rética) é Patrimônio Mundial da UNESCO. O trem sobe sem cremalheira e sem túnel de base até 2.253m no Ospizio Bernina — entre geleiras azuis e viadutos em espiral sobre vales profundos. Chegada a St. Moritz às 12:35. Check-in e jantar no resort alpino mais famoso do mundo." },
+                { date: "23 set.", title: "St. Moritz Livre", desc: "Dia completo em St. Moritz a 1.856m de altitude: Lago St. Moritz, Engadin Walking Trail, lojas de grife nas ruas cobertas de neve. A cidade que inventou o turismo de inverno em 1864. Almoço com vista para os Alpes e tarde de exploração livre." },
+                { date: "24 set.", title: "Partida para Berna", desc: "Trem SBB RegioExpress Nº 1346 saindo de St. Moritz às 13:47, com conexão em Landquart e Zurique, chegando em Berna às 17:58 (4h11min). Check-in na capital suíça medieval." },
+              ]
+            },
+            {
+              dest: "Berna", color: "#5c5c3a",
+              days: [
+                { date: "24 set.", title: "Chegada a Berna", desc: "Berna é a capital federal da Suíça — uma das cidades medievais mais bem preservadas da Europa, inscrita na UNESCO. A cidade velha (Altstadt) tem 6km de arcadas cobertas do séc. XIII, onde se anda protegido da chuva e da neve. Check-in e jantar na Altstadt." },
+                { date: "25 set.", title: "Berna & Partida para Zurique", desc: "Zytglogge: a Torre do Relógio de 1218, com relógio astronômico que anima figuras mecânicas a cada hora. Bärengraben: o fosso dos ursos — símbolo heráldico da cidade, com ursos vivendo à beira do rio Aare. Ao meio-dia, trem direto SBB IC Nº 819 (13:02→13:58) para Zurique — 56min de viagem." },
+              ]
+            },
+            {
+              dest: "Zurique", color: "#4a4a6a",
+              days: [
+                { date: "25 set.", title: "Zurique — Tarde & Noite", desc: "Zurique é a maior cidade da Suíça. Altstadt com o Grossmünster do séc. XII. Bahnhofstrasse: 1,4km de joalherias, relógios e marcas suíças exclusivas. Lago de Zurique com vista dos Alpes. Langstrasse à noite — o bairro mais animado da cidade." },
+                { date: "26 set.", title: "Zurique — Dia Livre", desc: "Museu Nacional Suíço (Landesmuseum): história e cultura da Suíça em um castelo neogótico. Lindenhügel: colina com vista panorâmica da cidade e dos Alpes. Tarde para compras ou visita ao bairro de Wiedikon. Última noite na Suíça." },
+                { date: "27 set.", title: "Partida para Paris", desc: "Voo SWISS LX 638 saindo do Aeroporto de Zurique (ZRH) às 12:40, chegando em Paris Charles de Gaulle (CDG) às 14:00 (1h20min). Traslado ao centro e check-in. Noite à beira da Torre Eiffel iluminada." },
+              ]
+            },
+            {
+              dest: "Paris", color: "#4a3a5c",
+              days: [
+                { date: "27 set.", title: "Chegada a Paris", desc: "Check-in e exploração do bairro. À noite, Torre Eiffel iluminada — o monumento mais visitado do mundo, construído em 1889 como estrutura temporária para a Exposição Universal e que se tornou o símbolo eterno da França." },
+                { date: "28 set.", title: "Disneyland Paris — Dia 1", desc: "Parque Disneyland: Castelo da Bela Adormecida, Fantasyland (Peter Pan, It's a Small World), Adventureland (Pirates of the Caribbean), Frontierland (Big Thunder Mountain Railroad) e o Fantasmic à noite." },
+                { date: "29 set.", title: "Disneyland Paris — Dia 2", desc: "Walt Disney Studios Park: Avengers Campus com experiências imersivas no universo Marvel. Moteurs… Action!: show de acrobacias. Star Wars: Rise of the Resistance. Shows noturnos com fogos e projeção mapeada na fachada do parque." },
+                { date: "30 set.", title: "Paris Clássico & Compras", desc: "Torre Eiffel de dia. Champs-Élysées e Arco do Triunfo. Louvre: o maior museu do mundo, Mona Lisa e Vênus de Milo. Montmartre e Sacré-Cœur com vista panorâmica de 360°. Galeries Lafayette e perfumarias." },
+                { date: "01 out.", title: "Partida para Londres", desc: "Eurostar Nº 9037 saindo da Gare du Nord às 14:30, chegando em London St Pancras às 16:05 (2h35min). O trem atravessa o Canal da Mancha pelo Eurotúnel — 50km de túnel submarino a 38m abaixo do mar." },
+              ]
+            },
+            {
+              dest: "Londres", color: "#3a5c3a",
+              days: [
+                { date: "01 out.", title: "Chegada a Londres", desc: "Check-in. Tower Bridge: a ponte vitoriana de 1894 com passarela de vidro sobre o Tâmisa. Tower of London: fortaleza de 900 anos que guarda as Joias da Coroa. Borough Market: mercado de alimentos desde 1014." },
+                { date: "02 out.", title: "Londres Clássico & Compras", desc: "Big Ben e Casas do Parlamento. Palácio de Buckingham com Troca da Guarda. Westminster Abbey: catedral onde reis são coroados há 1.000 anos. Oxford Street e Carnaby Street — epicentro da moda britânica. Covent Garden com artistas de rua." },
+                { date: "03 out.", title: "Notting Hill & Museus", desc: "Notting Hill: casas pastéis, Portobello Road Market (maior mercado de antiguidades do mundo). British Museum ou National Gallery — museus gratuitos de classe mundial. Thames Walk ao entardecer. Jantar de despedida britânico." },
+                { date: "04 out.", title: "Encerramento — Partida para Portugal", desc: "Manhã livre em Londres. Voo TAP TP 1361 saindo de Heathrow (LHR) às 16:35, chegando em Lisboa (LIS) às 19:25. Fim de uma viagem memorável pela Europa." },
+              ]
+            },
+          ].map(({ dest, color, days }) => (
+            <div key={dest} style={{ marginBottom: 40 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
+                <div style={{ width: 4, height: 32, background: color, borderRadius: 2 }} />
+                <h3 className="font-display" style={{ fontSize: 24, fontWeight: 500 }}>{dest}</h3>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingLeft: 20, borderLeft: `1px solid ${color}40` }}>
+                {days.map(({ date, title, desc }) => (
+                  <div key={date + title} style={{ padding: "14px 18px", background: "rgba(255,255,255,0.03)", borderRadius: 6, border: "1px solid rgba(255,255,255,0.06)" }}>
+                    <div style={{ display: "flex", gap: 16, alignItems: "baseline", flexWrap: "wrap", marginBottom: 4 }}>
+                      <span className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", whiteSpace: "nowrap" }}>{date}</span>
+                      <span className="font-display" style={{ fontSize: 16, fontWeight: 500 }}>{title}</span>
                     </div>
-                    <ul className="space-y-3">
-                      {day.items.map((item, j) => (
-                        <li key={j} className="flex flex-col gap-0.5">
-                          {item.time && (
-                            <span className="text-xs font-semibold uppercase tracking-wider text-primary">{item.time}</span>
-                          )}
-                          <span className="text-sm font-semibold">{item.title}</span>
-                          <span className="text-xs text-muted-foreground">{item.desc}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.6)", lineHeight: 1.6 }}>{desc}</p>
                   </div>
                 ))}
               </div>
             </div>
-          );
-        })}
-      </section>
-
-      {/* ROTEIRO AÉREO */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-20 md:pb-28">
-        <div className="mb-12 max-w-2xl">
-          <span className="text-gradient text-sm font-semibold uppercase tracking-[0.25em]">Roteiro aéreo</span>
-          <h2 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">
-            Voos e <span className="text-gradient">conexões</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Prévia para validação de datas — sujeita a ajustes conforme preferência.
-          </p>
-        </div>
-
-        <div className="space-y-6">
-          {trechos.map((trecho) => (
-            <div key={trecho.label} className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elegant)]">
-              <div className="flex items-center justify-between border-b border-border bg-secondary/40 px-6 py-4">
-                <div className="flex items-center gap-3">
-                  <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
-                    {trecho.label}
-                  </span>
-                  <span className="text-sm font-semibold">
-                    {trecho.origin} <span className="text-muted-foreground">→</span> {trecho.destination}
-                  </span>
-                </div>
-                <span className="text-lg">{trecho.flag}</span>
-              </div>
-              <div className="space-y-0 p-6">
-                {trecho.legs.map((leg, i) => (
-                  <LegCard key={i} leg={leg} />
-                ))}
-              </div>
-            </div>
           ))}
         </div>
       </section>
 
-      {/* INVESTIMENTO */}
-      <section className="relative overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(0,0,0,0) 60%)" }}
-        />
-        <div className="absolute inset-0 bg-grid opacity-20" />
-        <div className="relative mx-auto w-full max-w-6xl px-6 py-24 md:py-32">
-          <div className="mb-12 max-w-2xl">
-            <span className="text-gradient text-sm font-semibold uppercase tracking-[0.25em]">Investimento</span>
-            <h2 className="mt-3 text-3xl font-bold md:text-5xl">Valor do aéreo</h2>
-            <p className="mt-4 text-muted-foreground">
-              Somente passagens aéreas · todos os 5 trechos incluídos.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="relative overflow-hidden rounded-2xl border border-primary/40 bg-card p-6 shadow-[var(--shadow-elegant)]">
-              <div className="absolute right-0 top-0 h-40 w-40 rounded-full opacity-20 blur-3xl" style={{ background: "var(--gradient-accent)" }} />
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-primary">
-                <Wallet className="h-6 w-6" />
-              </div>
-              <p className="text-sm uppercase tracking-widest text-muted-foreground">À vista no Pix</p>
-              <p className="mt-3 text-5xl font-bold text-gradient">R$ 19.428,34</p>
-              <p className="mt-2 text-muted-foreground">Melhor condição para pagamento à vista.</p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)]">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-primary">
-                <CreditCard className="h-6 w-6" />
-              </div>
-              <p className="text-sm uppercase tracking-widest text-muted-foreground">No cartão de crédito</p>
-              <p className="mt-3 text-5xl font-bold">
-                12x <span className="text-gradient">R$ 1.836,79</span>
-              </p>
-              <p className="mt-2 text-muted-foreground">Parcelamento facilitado em até 12 vezes.</p>
-            </div>
-          </div>
-
-          <p className="mt-8 max-w-3xl text-sm text-muted-foreground">
-            Valores sujeitos a disponibilidade e variação tarifária até a confirmação e emissão dos bilhetes.
-            Esta é uma prévia para validação de datas — o roteiro completo será apresentado após aprovação dos voos.
-          </p>
-        </div>
-      </section>
+      <hr className="section-divider" />
 
       {/* FOOTER */}
-      <footer className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-6 px-6 py-12 md:flex-row md:items-center">
-          <div>
-            <img src={drkLogo.url} alt="DRK Viagens" className="h-14 w-auto" />
-            <p className="mt-2 text-sm text-muted-foreground">Viajar está nos detalhes · Proposta para Fernanda Santoro</p>
-          </div>
-          <div className="flex flex-col items-start gap-4 md:items-end">
-            <div className="text-sm text-muted-foreground md:text-right">
-              <p>drkviagens@gmail.com</p>
-              <p>+55 61 99506-1391</p>
-            </div>
-            <button
-              onClick={() => window.print()}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              <Download className="h-4 w-4" />
-              Baixar proposta em PDF
-            </button>
-          </div>
-        </div>
+      <footer style={{ padding: "60px 24px 40px", textAlign: "center" }}>
+        <img src={drkLogo.url} alt="DRK Viagens" style={{ height: 40, marginBottom: 20, opacity: 0.7 }} />
+        <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)", letterSpacing: "0.1em" }}>
+          Proposta elaborada exclusivamente para Geovanna · DRK Viagens · 2026
+        </p>
       </footer>
-    </main>
+    </div>
   );
 }

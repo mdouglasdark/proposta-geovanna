@@ -381,6 +381,37 @@ function Index() {
 
       <hr className="section-divider" />
 
+      {/* INGRESSOS */}
+      <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
+        <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Experiências</p>
+        <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 56 }}>
+          Ingressos Inclusos
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {/* Disney */}
+          <div style={{
+            display: "grid", gridTemplateColumns: "64px 1fr auto", gap: 20, alignItems: "center",
+            padding: "24px 24px", borderRadius: 10,
+            background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)"
+          }}>
+            <div style={{ fontSize: 36, textAlign: "center" }}>🏰</div>
+            <div>
+              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>Disneyland Paris</p>
+              <p className="font-display" style={{ fontSize: 20, fontWeight: 500, marginBottom: 4 }}>Ingresso 2 Dias · 2 Parques</p>
+              <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>Disneyland Park + Walt Disney Studios Park · 28–29 set. · 2 adultos</p>
+            </div>
+            <div style={{ textAlign: "right", whiteSpace: "nowrap" }}>
+              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.1em", marginBottom: 4 }}>incluso no pacote</p>
+              <p className="font-body" style={{ fontSize: 16, fontWeight: 600 }}>R$ 2.514,60</p>
+              <p className="font-body" style={{ fontSize: 10, color: "rgba(240,237,232,0.4)" }}>2 pessoas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
       {/* INVESTIMENTO */}
       <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
         <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Investimento</p>
@@ -388,7 +419,7 @@ function Index() {
           Valor do Pacote
         </h2>
         <p className="font-body" style={{ textAlign: "center", fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 56 }}>
-          Inclui voos, hospedagem, ingressos, seguro viagem e guia turístico · por pessoa
+          Inclui voos, hospedagem, ingressos e seguro viagem · por pessoa
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 40 }}>
@@ -401,7 +432,7 @@ function Index() {
           }}>
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Cartão de crédito</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>até 12x sem juros</p>
-            <p className="font-display" style={{ fontSize: 42, fontWeight: 500, color: "#f0ede8", lineHeight: 1.1, marginBottom: 4 }}>
+            <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#f0ede8", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
               12x R$ 3.703,33
             </p>
             <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 44.439,95 por pessoa</p>
@@ -423,7 +454,7 @@ function Index() {
             }}>Melhor opção</div>
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Pix à vista</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>desconto exclusivo</p>
-            <p className="font-display" style={{ fontSize: 42, fontWeight: 500, color: "#c9a96e", lineHeight: 1.1, marginBottom: 4 }}>
+            <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#c9a96e", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
               R$ 39.671,40
             </p>
             <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 4.768,55</p>
@@ -431,7 +462,7 @@ function Index() {
         </div>
 
         <p className="font-body" style={{ textAlign: "center", fontSize: 11, color: "rgba(240,237,232,0.35)", lineHeight: 1.7 }}>
-          Valores por pessoa · Sujeitos a disponibilidade até a emissão · Proposta válida por 5 dias úteis
+          Valores por pessoa · Sujeitos a disponibilidade até a emissão
         </p>
       </section>
 

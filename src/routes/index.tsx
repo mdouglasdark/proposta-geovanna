@@ -332,12 +332,12 @@ function Index() {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {[
-            { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · acompanhamento com guia especializada (roteiro de atrações, otimização de filas, logística do dia)" },
             { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Semi-Privativo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
             { icon: "⛪", label: "Roma", title: "Tour Vaticano — Semi-Privativo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 16 set." },
+            { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · acompanhamento com guia especializada (roteiro de atrações, otimização de filas, logística do dia)" },
             { icon: "🗼", label: "Paris", title: "Tour Primeira Vez em Paris", desc: "Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmides do Louvre, Tulherias e Palais Royal · guiado · 4h · 10 out." },
-            { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura em +70 países, incluindo toda a Europa" },
-            { icon: "🛡", label: "Seguro Viagem", title: "Cobertura Europa — 53 Países", desc: "Cobertura completa em toda a Europa (Schengen incluso), válida durante os 30 dias da viagem" },
+            { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura Europa (53 países) + 70 países no total" },
+            { icon: "🛡", label: "Seguro Viagem", title: "Seguro Viagem Internacional", desc: "Cobertura médica e de bagagem completa, válida durante os 30 dias da viagem" },
           ].map(({ icon, label, title, desc }) => (
             <div key={title} style={{
               display: "grid", gridTemplateColumns: "64px 1fr auto", gap: 20, alignItems: "center",

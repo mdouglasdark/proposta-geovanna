@@ -170,7 +170,7 @@ function Index() {
             { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "10:06 → 12:35", operadora: "Ferrovia Rética · Nº 972 · travessia alpina a 2.253m · 2h29min" },
             { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min" },
             { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sáb., 26 set.", horario: "13:31 → 14:41", operadora: "SBB · IC 1 · Bern → Zürich HB · direto · 1h10min" },
-            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Dom., 28 set.", horario: "a confirmar", operadora: "SWISS / British Airways · ZRH → LHR · ~2h" },
+            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Seg., 28 set.", horario: "17:10 → 17:50", operadora: "SWISS · LX 432 · ZRH → London Gatwick (LGW) · direto · 1h40min" },
             { tipo: "✈", label: "Voo", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "13:55 → 16:10", operadora: "British Airways · BA 386 · LHR → BRU · 1h15min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
@@ -259,14 +259,14 @@ function Index() {
               days: [
                 { date: "26 set.", title: "Zurique — Chegada & Tarde", desc: "Altstadt com o Grossmünster do séc. XII. Bahnhofstrasse: 1,4km de joalherias e relógios exclusivos. Lago de Zurique com vista dos Alpes." },
                 { date: "27 set.", title: "Zurique — Dia Livre", desc: "Museu Nacional Suíço (castelo neogótico), Lindenhügel (vista panorâmica), bairro de Wiedikon. Última noite na Suíça." },
-                { date: "28 set.", title: "Partida para Londres", desc: "Voo ZRH → LHR (SWISS / British Airways · ~2h). Chegada a Londres e check-in." },
+                { date: "28 set.", title: "Partida para Londres", desc: "Voo SWISS LX 432 · Zurique 17:10 → London Gatwick 17:50 (direto, 1h40min). Chegada a Londres e check-in no Park Plaza County Hall." },
               ]
             },
             {
               dest: "Londres", color: "#3a5c3a",
               days: [
-                { date: "28 set.", title: "Chegada a Londres", desc: "Tower Bridge: ponte vitoriana de 1894. Tower of London: fortaleza de 900 anos com as Joias da Coroa. Borough Market." },
-                { date: "29 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Palácio de Buckingham com Troca da Guarda. Westminster Abbey." },
+                { date: "28 set.", title: "Chegada a Londres", desc: "Desembarque em Gatwick às 17:50 e traslado ao hotel. Noite livre: South Bank e London Eye iluminado às margens do Tâmisa." },
+                { date: "29 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Westminster Abbey. Palácio de Buckingham com Troca da Guarda. Tower Bridge e Tower of London com as Joias da Coroa." },
                 { date: "30 set.", title: "Compras & Cultura", desc: "Oxford Street, Carnaby Street, Covent Garden. British Museum ou National Gallery (museus gratuitos)." },
                 { date: "01 out.", title: "Notting Hill", desc: "Casas pastéis, Portobello Road Market (maior mercado de antiguidades do mundo). Thames Walk ao entardecer. Jantar de despedida britânico." },
                 { date: "02 out.", title: "Partida para Bélgica", desc: "Voo British Airways BA 386 · Heathrow 13:55 → Bruxelas 16:10 (1h15min). Check-in em Bruxelas, Grand Place à noite — uma das praças mais belas da Europa." },

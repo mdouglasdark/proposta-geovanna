@@ -169,11 +169,11 @@ function Index() {
             { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "06:20 → 08:52", operadora: "Trenord · Nº 2812 · 2h32min" },
             { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "10:06 → 12:35", operadora: "Ferrovia Rética · Nº 972 · travessia alpina a 2.253m · 2h29min" },
             { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min" },
-            { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sáb., 26 set.", horario: "a confirmar", operadora: "SBB · IC · Bern → Zürich HB · ~1h" },
+            { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sáb., 26 set.", horario: "13:31 → 14:41", operadora: "SBB · IC 1 · Bern → Zürich HB · direto · 1h10min" },
             { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Dom., 28 set.", horario: "a confirmar", operadora: "SWISS / British Airways · ZRH → LHR · ~2h" },
-            { tipo: "🚄", label: "Eurostar", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "a confirmar", operadora: "Eurostar · London St Pancras → Brussels Midi · 2h" },
-            { tipo: "🚄", label: "Thalys", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "a confirmar", operadora: "Thalys · Brussels Midi → Amsterdam Centraal · ~2h" },
-            { tipo: "🚄", label: "Thalys", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "a confirmar", operadora: "Thalys · Amsterdam Centraal → Paris Nord · ~3h20min" },
+            { tipo: "✈", label: "Voo", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "13:55 → 16:10", operadora: "British Airways · BA 386 · LHR → BRU · 1h15min" },
+            { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
+            { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
           ].map(({ tipo, label, trecho, data, horario, operadora }, i) => (
             <div key={i} style={{
               display: "grid", gridTemplateColumns: "48px 1fr auto",
@@ -251,7 +251,7 @@ function Index() {
               days: [
                 { date: "24 set.", title: "Chegada a Berna", desc: "Capital federal da Suíça — Patrimônio UNESCO. Cidade velha com 6km de arcadas medievais do séc. XIII. Check-in e jantar na Altstadt." },
                 { date: "25 set.", title: "Berna & Arredores", desc: "Zytglogge (Torre do Relógio de 1218), Bärengraben (fosso dos ursos). Day trip opcional: Interlaken (1h) com vista para o Jungfraujoch, ou Gruyères — cidade medieval do queijo e chocolate." },
-                { date: "26 set.", title: "Partida para Zurique", desc: "Trem SBB IC · Berna → Zürich HB (a confirmar). Check-in em Zurique, tarde na Bahnhofstrasse." },
+                { date: "26 set.", title: "Partida para Zurique", desc: "Trem SBB IC 1 · Berna 13:31 → Zürich HB 14:41 (direto, 1h10min). Check-in em Zurique, tarde na Bahnhofstrasse." },
               ]
             },
             {
@@ -269,7 +269,7 @@ function Index() {
                 { date: "29 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Palácio de Buckingham com Troca da Guarda. Westminster Abbey." },
                 { date: "30 set.", title: "Compras & Cultura", desc: "Oxford Street, Carnaby Street, Covent Garden. British Museum ou National Gallery (museus gratuitos)." },
                 { date: "01 out.", title: "Notting Hill", desc: "Casas pastéis, Portobello Road Market (maior mercado de antiguidades do mundo). Thames Walk ao entardecer. Jantar de despedida britânico." },
-                { date: "02 out.", title: "Partida para Bélgica", desc: "Eurostar · London St Pancras → Brussels Midi (~2h). Check-in em Bruxelas, Grand Place à noite — uma das praças mais belas da Europa." },
+                { date: "02 out.", title: "Partida para Bélgica", desc: "Voo British Airways BA 386 · Heathrow 13:55 → Bruxelas 16:10 (1h15min). Check-in em Bruxelas, Grand Place à noite — uma das praças mais belas da Europa." },
               ]
             },
             {
@@ -277,7 +277,7 @@ function Index() {
               days: [
                 { date: "02 out.", title: "Chegada a Bruxelas", desc: "Grand Place: praça gótica do séc. XVII, Patrimônio UNESCO. Manneken Pis. Cervejas belgas e chocolate artesanal nas galerias cobertas." },
                 { date: "03 out.", title: "Day Trip — Bruges", desc: "1h de trem. Bruges é a cidade medieval mais preservada da Europa: canais centenários, Igreja de Nossa Senhora (Michelangelo original), Mercado de Bruges, Minnewater (Lago do Amor). Jantar em Bruxelas." },
-                { date: "04 out.", title: "Partida para Amsterdam", desc: "Thalys · Brussels Midi → Amsterdam Centraal (~2h). Check-in e primeira exploração dos canais holandeses." },
+                { date: "04 out.", title: "Partida para Amsterdam", desc: "Eurostar 9339 · Bruxelles-Midi 13:53 → Amsterdam Centraal 16:13 (direto, 2h20min). Check-in e primeira exploração dos canais holandeses." },
               ]
             },
             {
@@ -286,7 +286,7 @@ function Index() {
                 { date: "04 out.", title: "Chegada a Amsterdam", desc: "Amsterdam tem 165 canais e 1.281 pontes. Passeio de barco ao entardecer e jantar no bairro Jordaan." },
                 { date: "05 out.", title: "Museus & Canais", desc: "Rijksmuseum: acervo de Rembrandt e Vermeer. Casa de Anne Frank: o diário mais famoso do mundo. Bicicletada pelos canais." },
                 { date: "06 out.", title: "Amsterdam Livre", desc: "Mercado Albert Cuyp (maior mercado ao ar livre da Holanda). Bairro De Pijp com cafés e galerias. Bloemenmarkt — mercado flutuante de flores." },
-                { date: "07 out.", title: "Partida para Paris", desc: "Thalys · Amsterdam Centraal → Paris Nord (~3h20min). Check-in em Paris e Torre Eiffel iluminada à noite." },
+                { date: "07 out.", title: "Partida para Paris", desc: "Eurostar 9352 · Amsterdam Centraal 13:10 → Paris Gare du Nord 16:45 (direto, 3h35min). Check-in em Paris e Torre Eiffel iluminada à noite." },
               ]
             },
             {

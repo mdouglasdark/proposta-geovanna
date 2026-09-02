@@ -218,7 +218,7 @@ function Index() {
               dest: "Roma & Vaticano", color: "#5c3d2e",
               days: [
                 { date: "15 set.", title: "Roma Antiga à Tarde", desc: "Fontana di Trevi, Piazza Navona, Campo de' Fiori. Jantar em Trastevere." },
-                { date: "16 set.", title: "Vaticano & Coliseu", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro. Coliseu e Foro Romano." },
+                { date: "16 set.", title: "Vaticano & Coliseu — Tours Semi-Privativos", desc: "Tour Vaticano semi-privativo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro, guia oficial em português. Tour Arena Roma Imperial semi-privativo: entrada rápida no Coliseu, arquibancadas, Fórum Romano e Palatino." },
                 { date: "17 set.", title: "Roma Livre", desc: "Villa Borghese, Castelo de Sant'Angelo, bairro Prati. Jantar de despedida romano." },
                 { date: "18 set.", title: "Partida para Veneza", desc: "Italo 8916 · Roma Tiburtina 12:58 → Venice Mestre 16:42 (3h44min). Traslado de barco-táxi ao hotel." },
               ]
@@ -296,7 +296,7 @@ function Index() {
                 { date: "07 out.", title: "Chegada a Paris", desc: "Check-in no Mercure Paris Centre Tour Eiffel, a poucos passos da Torre. Primeira noite parisiense com vista para o monumento mais icônico do mundo." },
                 { date: "08 out.", title: "Disneyland Paris — Dia 1", desc: "Disneyland Park: Castelo da Bela Adormecida, Fantasyland, Adventureland (Pirates of the Caribbean), Big Thunder Mountain. Fantasmic ao anoitecer." },
                 { date: "09 out.", title: "Disneyland Paris — Dia 2", desc: "Walt Disney Studios Park: Avengers Campus, Star Wars: Rise of the Resistance, shows noturnos com fogos e projeção mapeada." },
-                { date: "10 out.", title: "Paris Clássico & Compras", desc: "Torre Eiffel de dia. Champs-Élysées, Arco do Triunfo, Louvre (Mona Lisa, Vênus de Milo). Montmartre e Sacré-Cœur. Galeries Lafayette e perfumarias." },
+                { date: "10 out.", title: "Paris Clássico & Compras", desc: "Tour guiado 'Primeira Vez em Paris' (4h): Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmide do Louvre, Jardim das Tulherias e Palais Royal. Louvre (Mona Lisa, Vênus de Milo), Montmartre e Sacré-Cœur à tarde." },
                 { date: "11 out.", title: "Encerramento — Paris", desc: "Manhã livre na cidade mais visitada do mundo. Último café parisiense, últimas fotos. Fim de uma jornada inesquecível." },
               ]
             },
@@ -328,24 +328,33 @@ function Index() {
       <section style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}>
         <p className="font-body gold" style={{ letterSpacing: "0.3em", fontSize: 10, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Experiências</p>
         <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500, textAlign: "center", marginBottom: 56 }}>
-          Ingressos Inclusos
+          Tours, Ingressos & Serviços Inclusos
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{
-            display: "grid", gridTemplateColumns: "64px 1fr auto", gap: 20, alignItems: "center",
-            padding: "24px", borderRadius: 10,
-            background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)"
-          }}>
-            <div style={{ fontSize: 36, textAlign: "center" }}>🏰</div>
-            <div>
-              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>Disneyland Paris</p>
-              <p className="font-display" style={{ fontSize: 20, fontWeight: 500, marginBottom: 4 }}>Ingresso 2 Dias · 2 Parques</p>
-              <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos</p>
+          {[
+            { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · acompanhamento com guia especializada (roteiro de atrações, otimização de filas, logística do dia)" },
+            { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Semi-Privativo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
+            { icon: "⛪", label: "Roma", title: "Tour Vaticano — Semi-Privativo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 16 set." },
+            { icon: "🗼", label: "Paris", title: "Tour Primeira Vez em Paris", desc: "Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmides do Louvre, Tulherias e Palais Royal · guiado · 4h · 10 out." },
+            { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura em +70 países, incluindo toda a Europa" },
+            { icon: "🛡", label: "Seguro Viagem", title: "Cobertura Europa — 53 Países", desc: "Cobertura completa em toda a Europa (Schengen incluso), válida durante os 30 dias da viagem" },
+          ].map(({ icon, label, title, desc }) => (
+            <div key={title} style={{
+              display: "grid", gridTemplateColumns: "64px 1fr auto", gap: 20, alignItems: "center",
+              padding: "24px", borderRadius: 10,
+              background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)"
+            }}>
+              <div style={{ fontSize: 36, textAlign: "center" }}>{icon}</div>
+              <div>
+                <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{label}</p>
+                <p className="font-display" style={{ fontSize: 20, fontWeight: 500, marginBottom: 4 }}>{title}</p>
+                <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>{desc}</p>
+              </div>
+              <div style={{ textAlign: "right" }}>
+                <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.1em", whiteSpace: "nowrap" }}>incluso no pacote</p>
+              </div>
             </div>
-            <div style={{ textAlign: "right" }}>
-              <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.1em" }}>incluso no pacote</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

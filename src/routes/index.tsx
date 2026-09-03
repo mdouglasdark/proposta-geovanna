@@ -167,9 +167,9 @@ function Index() {
             { tipo: "🚄", label: "Trem Intercity", trecho: "Pisa → Roma", data: "Ter., 15 set.", horario: "11:11 → 14:33", operadora: "Trenitalia · IC 505 · 3h22min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Roma → Veneza", data: "Sex., 18 set.", horario: "12:58 → 16:42", operadora: "Italo · Nº 8916 · Roma Tiburtina → Venice Mestre · 3h44min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },
-            { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "11:20 → 13:52", operadora: "Trenord · Nº 2822 · Milano Centrale → Tirano · 2h32min" },
-            { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "16:06 → 18:25", operadora: "Ferrovia Rética · Nº 976 · travessia alpina a 2.253m · 2h19min" },
-            { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min" },
+            { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "11:20 → 13:52", operadora: "Trenord · Nº 2822 · Milano Centrale → Tirano · 2h32min", alerta: "⚠ Atenção: chegada em Tirano às 13:52 (estação Trenord/FS italiana) — o Bernina Express parte às 16:06 de uma estação diferente (estação RhB, ferrovia suíça). São ~2h14min livres em Tirano: aproveite para almoçar e caminhar até a estação RhB (a poucos minutos a pé, bem sinalizada, seguir placas 'Ferrovia Retica / Bernina Express'). Recomendado chegar à plataforma RhB com pelo menos 20 min de antecedência." },
+            { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "16:06 → 18:25", operadora: "Ferrovia Rética · Nº 976 · travessia alpina a 2.253m · 2h19min", alerta: "Embarque na estação RhB (Ferrovia Rética) de Tirano — diferente da estação onde desembarcaram do trem Trenord vindo de Milão." },
+            { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min", alerta: "⚠ Trajeto com 2 baldeações, cada conexão com apenas 9 minutos — passo a passo: (1) Embarcar em St. Moritz às 13:47. (2) Desembarcar em Landquart, verificar o número da plataforma no painel da estação assim que descer (muda conforme o dia) e seguir direto para o próximo trem — 9 min de conexão, sem tempo para parar. (3) Desembarcar em Zürich HB, novamente checar plataforma no painel eletrônico ao descer e seguir rápido — mais 9 min de conexão. (4) Chegada em Berna às 17:58. Dica: viajar com bagagem de mão leve e próxima ao corpo agiliza a troca; os horários e plataformas exatos de cada conexão estão nos bilhetes emitidos pela SBB." },
             { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sex., 25 set.", horario: "13:31 → 14:41", operadora: "SBB · IC 1 · Bern → Zürich HB · direto · 1h10min" },
             { tipo: "🚌🚠", label: "Day Trip", trecho: "Jungfraujoch — Topo da Europa", data: "Sáb., 26 set.", horario: "12 horas · saída de Zurique", operadora: "Zurique → Interlaken → Grindelwald → Eiger Express + trem cremalheira → Jungfraujoch (3.400m) → Lauterbrunnen → Zurique" },
             { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Seg., 28 set.", horario: "17:10 → 17:50", operadora: "SWISS · LX 432 · ZRH → London Gatwick (LGW) · direto · 1h40min" },
@@ -177,22 +177,28 @@ function Index() {
             { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
             { tipo: "✈", label: "Voo Internacional · Retorno (amiga)", trecho: "Paris → São Paulo", data: "Dom., 11 out.", horario: "13:00 → 19:50", operadora: "LATAM · LA 8133 · CDG → GRU · direto · Boeing 787 · 11h50min" },
-          ].map(({ tipo, label, trecho, data, horario, operadora }, i) => (
+          ].map(({ tipo, label, trecho, data, horario, operadora, alerta }, i) => (
             <div key={i} style={{
-              display: "grid", gridTemplateColumns: "48px 1fr auto",
-              gap: 16, alignItems: "center", padding: "18px 20px", borderRadius: 8,
+              padding: "18px 20px", borderRadius: 8,
               background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)"
             }}>
-              <div style={{ fontSize: 22, textAlign: "center" }}>{tipo}</div>
-              <div>
-                <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{label}</p>
-                <p className="font-display" style={{ fontSize: 18, fontWeight: 500, marginBottom: 4 }}>{trecho}</p>
-                <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>{operadora}</p>
+              <div style={{ display: "grid", gridTemplateColumns: "48px 1fr auto", gap: 16, alignItems: "center" }}>
+                <div style={{ fontSize: 22, textAlign: "center" }}>{tipo}</div>
+                <div>
+                  <p className="font-body" style={{ fontSize: 10, color: "#c9a96e", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{label}</p>
+                  <p className="font-display" style={{ fontSize: 18, fontWeight: 500, marginBottom: 4 }}>{trecho}</p>
+                  <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.5)" }}>{operadora}</p>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <p className="font-body" style={{ fontSize: 12, color: "#c9a96e", marginBottom: 4 }}>{data}</p>
+                  <p className="font-body" style={{ fontSize: 13, fontWeight: 500 }}>{horario}</p>
+                </div>
               </div>
-              <div style={{ textAlign: "right" }}>
-                <p className="font-body" style={{ fontSize: 12, color: "#c9a96e", marginBottom: 4 }}>{data}</p>
-                <p className="font-body" style={{ fontSize: 13, fontWeight: 500 }}>{horario}</p>
-              </div>
+              {alerta && (
+                <p className="font-body" style={{ fontSize: 12, color: "#e0c088", lineHeight: 1.6, marginTop: 14, paddingTop: 14, borderTop: "1px solid rgba(201,169,110,0.2)" }}>
+                  {alerta}
+                </p>
+              )}
             </div>
           ))}
         </div>

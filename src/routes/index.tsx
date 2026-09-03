@@ -165,7 +165,6 @@ function Index() {
           {[
             { tipo: "✈", label: "Voo Internacional", trecho: "GRU → FCO", data: "Sex., 11 set.", horario: "14:15 → 06:50+1", operadora: "ITA Airways · AZ 675 · direto · 12h35min" },
             { tipo: "🚗", label: "Locação de Veículo", trecho: "Toscana — Mercedes-Benz GLC (Avis)", data: "12–16 set.", horario: "Retirada 08:00 · Devolução 10:00", operadora: "SUV Premium automático, 5 portas, 5 lugares, ar-condicionado · Retirada: Aeroporto de Roma Fiumicino · Devolução: Roma Termini, Via Giolitti 34" },
-            { tipo: "🚄", label: "Trem Intercity", trecho: "Pisa → Roma", data: "Ter., 15 set.", horario: "11:11 → 14:33", operadora: "Trenitalia · IC 505 · 3h22min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Roma → Veneza", data: "Sex., 18 set.", horario: "12:58 → 16:42", operadora: "Italo · Nº 8916 · Roma Tiburtina → Venice Mestre · 3h44min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },
             { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "11:20 → 13:52", operadora: "Trenord · Nº 2822 · Milano Centrale → Tirano · 2h32min", alerta: "⚠ Atenção: chegada em Tirano às 13:52 (estação Trenord/FS italiana) — o Bernina Express parte às 16:06 de uma estação diferente (estação RhB, ferrovia suíça). São ~2h14min livres em Tirano: aproveite para almoçar e caminhar até a estação RhB (a poucos minutos a pé, bem sinalizada, seguir placas 'Ferrovia Retica / Bernina Express'). Recomendado chegar à plataforma RhB com pelo menos 20 min de antecedência." },
@@ -223,7 +222,7 @@ function Index() {
               days: [
                 { date: "11–12 set.", title: "Chegada à Toscana", desc: "Voo noturno GRU→FCO · ITA AZ 675, chegada 06:50 em Roma. Retirada do carro (Mercedes-Benz GLC, Avis) às 08:00 no Aeroporto de Fiumicino e trajeto de carro até Pisa. Check-in no Grand Hotel Bonanno, a 15 min a pé da Torre Inclinada. Descanso." },
                 { date: "13–14 set.", title: "Casamento Larissa & Isac", desc: "Dia livre em Florença: Duomo, Galeria Uffizi, Ponte Vecchio. À noite do dia 14, celebração do casamento." },
-                { date: "15 set.", title: "Partida para Roma", desc: "Trem IC 505 Trenitalia · Pisa Centrale 11:11 → Roma Termini 14:33. Devolução do carro alugado em Roma Termini (Via Giolitti 34). Check-in e primeiros passos pela cidade." },
+                { date: "15 set.", title: "Partida para Roma", desc: "Trajeto de carro (Mercedes-Benz GLC) de Pisa até Roma. Devolução do veículo alugado em Roma Termini (Via Giolitti 34). Check-in e primeiros passos pela cidade." },
               ]
             },
             {

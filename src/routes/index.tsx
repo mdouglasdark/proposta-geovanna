@@ -121,7 +121,7 @@ function Index() {
           {[
             { dest: "Toscana · Pisa", hotel: "Grand Hotel Bonanno", stars: 5, addr: "Via Carlo Francesco Gabba 17, Pisa", checkin: "11 set. · 14:00", checkout: "15 set. · 11:00", noites: "4 noites", extras: "Buffet de café da manhã incluso · a 15 min a pé da Torre Inclinada" },
             { dest: "Roma", hotel: "Best Western Premier Hotel Royal Santina", stars: 4, addr: "Via Marsala 22", checkin: "15 set. · 14:00", checkout: "18 set. · 11:00", noites: "3 noites", extras: "Café da manhã incluso" },
-            { dest: "Veneza", hotel: "Hotel Aquarius Venice", stars: 4, addr: "Campo San Giacomo dell'Orio 1624", checkin: "18 set. · 15:00", checkout: "20 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
+            { dest: "Veneza", hotel: "Avani Rio Novo Venice Hotel", stars: 4, addr: "Calle Larga Ragusei, Dorsoduro 3489", checkin: "18 set. · 15:00", checkout: "20 set. · 12:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Milão", hotel: "Hotel Bernina", stars: 3, addr: "Via Napo Torriani 27", checkin: "20 set. · 14:00", checkout: "22 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "St. Moritz", hotel: "Hotel Reine Victoria", stars: 4, addr: "Via Rosatsch 18", checkin: "22 set. · 15:00", checkout: "24 set. · 07:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Berna", hotel: "Hotel Savoy Bern", stars: 4, addr: "Neuengasse 26", checkin: "24 set. · 15:00", checkout: "25 set. · 11:00", noites: "1 noite", extras: "Café da manhã incluso" },

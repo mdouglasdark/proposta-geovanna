@@ -338,7 +338,7 @@ function Index() {
             { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · acompanhamento com guia especializada (roteiro de atrações, otimização de filas, logística do dia)" },
             { icon: "🗼", label: "Paris", title: "Tour Primeira Vez em Paris", desc: "Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmides do Louvre, Tulherias e Palais Royal · guiado · 4h · 10 out." },
             { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura Europa (53 países) + 70 países no total" },
-            { icon: "🛡", label: "Seguro Viagem", title: "Seguro Viagem Internacional", desc: "Cobertura médica e de bagagem completa, válida durante os 30 dias da viagem" },
+            { icon: "🛡", label: "Seguro Viagem", title: "Seguro Viagem Internacional · DMH USD 150.000", desc: "Despesas médicas, hospitalares, odontológicas e farmacêuticas · cobre Covid-19, doenças pré-existentes e esportes amadores · perda/atraso/dano de bagagem · cancelamento e atraso de voo · traslado médico e regresso sanitário · assistência jurídica · válido pelos 30 dias da viagem" },
           ].map(({ icon, label, title, desc }) => (
             <div key={title} style={{
               display: "grid", gridTemplateColumns: "64px 1fr auto", gap: 20, alignItems: "center",

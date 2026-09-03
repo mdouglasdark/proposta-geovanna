@@ -164,7 +164,7 @@ function Index() {
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {[
             { tipo: "✈", label: "Voo Internacional", trecho: "GRU → FCO", data: "Sex., 11 set.", horario: "14:15 → 06:50+1", operadora: "ITA Airways · AZ 675 · direto · 12h35min" },
-            { tipo: "🚗", label: "Locação de Veículo", trecho: "Toscana — Mercedes-Benz GLC (Avis)", data: "12–16 set.", horario: "Retirada 08:00 · Devolução 10:00", operadora: "SUV Premium automático, 5 portas, 5 lugares, ar-condicionado · Retirada: Aeroporto de Roma Fiumicino · Devolução: Roma Termini, Via Giolitti 34" },
+            { tipo: "🚗", label: "Locação de Veículo", trecho: "Toscana — Mercedes-Benz GLC (Avis)", data: "12–16 set.", horario: "Retirada 08:00 · Devolução 08:00", operadora: "SUV Premium automático, 5 portas, 5 lugares, ar-condicionado · Retirada: Aeroporto de Roma Fiumicino · Devolução: Roma Termini, Via Giolitti 34" },
             { tipo: "🎨", label: "Passeio de Carro", trecho: "Cinque Terre", data: "Dom., 13 set.", horario: "saída de Pisa", operadora: "Riomaggiore, Manarola, Vernazza, Corniglia e Monterosso · Patrimônio Mundial UNESCO · com a família da Larissa" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Roma → Veneza", data: "Sex., 18 set.", horario: "12:58 → 16:42", operadora: "Italo · Nº 8916 · Roma Tiburtina → Venice Mestre · 3h44min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },

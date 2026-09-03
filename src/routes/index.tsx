@@ -167,8 +167,8 @@ function Index() {
             { tipo: "🚄", label: "Trem Intercity", trecho: "Pisa → Roma", data: "Ter., 15 set.", horario: "11:11 → 14:33", operadora: "Trenitalia · IC 505 · 3h22min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Roma → Veneza", data: "Sex., 18 set.", horario: "12:58 → 16:42", operadora: "Italo · Nº 8916 · Roma Tiburtina → Venice Mestre · 3h44min" },
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },
-            { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "06:20 → 08:52", operadora: "Trenord · Nº 2812 · 2h32min" },
-            { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "10:06 → 12:35", operadora: "Ferrovia Rética · Nº 972 · travessia alpina a 2.253m · 2h29min" },
+            { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "11:20 → 13:52", operadora: "Trenord · Nº 2822 · Milano Centrale → Tirano · 2h32min" },
+            { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "16:06 → 18:25", operadora: "Ferrovia Rética · Nº 976 · travessia alpina a 2.253m · 2h19min" },
             { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min" },
             { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sex., 25 set.", horario: "13:31 → 14:41", operadora: "SBB · IC 1 · Bern → Zürich HB · direto · 1h10min" },
             { tipo: "🚌🚠", label: "Day Trip", trecho: "Jungfraujoch — Topo da Europa", data: "Sáb., 26 set.", horario: "12 horas · saída de Zurique", operadora: "Zurique → Interlaken → Grindelwald → Eiger Express + trem cremalheira → Jungfraujoch (3.400m) → Lauterbrunnen → Zurique" },
@@ -238,7 +238,7 @@ function Index() {
               days: [
                 { date: "20 set.", title: "Chegada a Milão — Navigli", desc: "Canais históricos do séc. XV, aperitivo milanês com petiscos gratuitos a partir das 18h." },
                 { date: "21 set.", title: "Milão Clássico", desc: "Duomo di Milano (135 torres), Galleria Vittorio Emanuele II, Brera, La Scala." },
-                { date: "22 set.", title: "Partida pela Linha do Bernina", desc: "Trenord 2812 · Milano Centrale 06:20 → Tirano 08:52. Visita ao Santuário de Tirano. Bernina Express 972 · 10:06 → St. Moritz 12:35." },
+                { date: "22 set.", title: "Partida pela Linha do Bernina", desc: "Trenord 2822 · Milano Centrale 11:20 → Tirano 13:52. Visita ao Santuário de Tirano. Bernina Express 976 · 16:06 → St. Moritz 18:25." },
               ]
             },
             {

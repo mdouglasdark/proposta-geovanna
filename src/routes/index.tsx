@@ -119,6 +119,7 @@ function Index() {
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
           {[
+            { dest: "Toscana · Pisa", hotel: "Grand Hotel Bonanno", stars: 5, addr: "Via Carlo Francesco Gabba 17, Pisa", checkin: "11 set. · 14:00", checkout: "15 set. · 11:00", noites: "4 noites", extras: "Buffet de café da manhã incluso · a 15 min a pé da Torre Inclinada" },
             { dest: "Roma", hotel: "Best Western Premier Hotel Royal Santina", stars: 4, addr: "Via Marsala 22", checkin: "15 set. · 14:00", checkout: "18 set. · 11:00", noites: "3 noites", extras: "Café da manhã incluso" },
             { dest: "Veneza", hotel: "Hotel Aquarius Venice", stars: 4, addr: "Campo San Giacomo dell'Orio 1624", checkin: "18 set. · 15:00", checkout: "20 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Milão", hotel: "Hotel Bernina", stars: 3, addr: "Via Napo Torriani 27", checkin: "20 set. · 14:00", checkout: "22 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
@@ -210,7 +211,7 @@ function Index() {
             {
               dest: "Toscana", color: "#7a5c38",
               days: [
-                { date: "11–12 set.", title: "Chegada à Toscana", desc: "Voo noturno GRU→FCO · ITA AZ 675. Chegada em Roma pela manhã e traslado para a Toscana. Check-in e descanso." },
+                { date: "11–12 set.", title: "Chegada à Toscana", desc: "Voo noturno GRU→FCO · ITA AZ 675. Chegada em Roma pela manhã e traslado para Pisa. Check-in no Grand Hotel Bonanno, a 15 min a pé da Torre Inclinada. Descanso." },
                 { date: "13–14 set.", title: "Casamento Larissa & Isac", desc: "Dia livre em Florença: Duomo, Galeria Uffizi, Ponte Vecchio. À noite do dia 14, celebração do casamento." },
                 { date: "15 set.", title: "Partida para Roma", desc: "Trem IC 505 Trenitalia · Pisa Centrale 11:11 → Roma Termini 14:33. Check-in e primeiros passos pela cidade." },
               ]

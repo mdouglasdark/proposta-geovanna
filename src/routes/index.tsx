@@ -175,7 +175,7 @@ function Index() {
             { tipo: "🚠", label: "Day Trip", trecho: "Jungfraujoch — Topo da Europa", data: "Sáb., 26 set.", horario: "saída de Berna, chegada em Zurique", operadora: "Berna → Grindelwald → Eiger Express + trem cremalheira → Jungfraujoch (3.400m) → descida direto para Zurique (sem retorno a Berna) · check-in no hotel em Zurique à noite" },
             { tipo: "🚌", label: "Excursão", trecho: "Monte Titlis & Lucerna", data: "Dom., 27 set.", horario: "saída de Zurique", operadora: "Teleférico rotativo até o Monte Titlis (3.020m, neve o ano todo) + tarde na charmosa Lucerna, Ponte da Capela e Leão de Lucerna" },
             { tipo: "🍫", label: "Passeio", trecho: "Fábrica da Lindt & Compras", data: "Seg., 28 set.", horario: "em Zurique", operadora: "Lindt Home of Chocolate + tarde livre para compras na Bahnhofstrasse" },
-            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Ter., 29 set.", horario: "a confirmar", operadora: "voo + transfer privativo ao aeroporto · ZRH → Londres" },
+            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Ter., 29 set.", horario: "12:05 → 13:00", operadora: "SWISS · LX 332 · ZRH → London Heathrow (LHR) · direto · 1h55min · transfer privativo até o aeroporto" },
             { tipo: "✈", label: "Voo", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "13:55 → 16:10", operadora: "British Airways · BA 386 · LHR → BRU · 1h15min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
@@ -271,13 +271,13 @@ function Index() {
                 { date: "26 set.", title: "Jungfraujoch — Topo da Europa (saindo de Berna)", desc: "Saída de Berna rumo a Grindelwald, teleférico Eiger Express + trem cremalheira até Jungfraujoch (3.400m, a estação ferroviária mais alta da Europa). Patrimônio Mundial UNESCO — vistas dos picos Eiger, Mönch e Jungfrau, Mirante Sphinx, Palácio de Gelo e Glaciar Aletsch. ~2h30 livres no topo. Descida direto para Zurique (sem retorno a Berna) e check-in no hotel à noite." },
                 { date: "27 set.", title: "Excursão — Monte Titlis & Lucerna", desc: "Teleférico rotativo até o Monte Titlis (3.020m, neve o ano todo). Tarde na charmosa Lucerna: Ponte da Capela e o monumento do Leão de Lucerna." },
                 { date: "28 set.", title: "Zurique & Fábrica da Lindt", desc: "Lindt Home of Chocolate — maior fábrica-museu de chocolate do mundo. Tarde livre para compras na Bahnhofstrasse. Última noite na Suíça." },
-                { date: "29 set.", title: "Partida para Londres", desc: "Transfer privativo ao aeroporto de Zurique. Voo para Londres (a confirmar) e check-in no Pullman London St Pancras." },
+                { date: "29 set.", title: "Partida para Londres", desc: "Transfer privativo ao aeroporto de Zurique. Voo SWISS LX 332 · Zurique 12:05 → London Heathrow 13:00 (direto, 1h55min). Check-in no Pullman London St Pancras." },
               ]
             },
             {
               dest: "Londres", color: "#3a5c3a",
               days: [
-                { date: "29 set.", title: "Chegada a Londres", desc: "Traslado ao hotel e check-in no Pullman London St Pancras. Noite livre: South Bank e London Eye iluminado às margens do Tâmisa." },
+                { date: "29 set.", title: "Chegada a Londres", desc: "Desembarque em Heathrow às 13:00, traslado ao hotel e check-in no Pullman London St Pancras. Tarde livre: South Bank e London Eye iluminado às margens do Tâmisa." },
                 { date: "30 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Westminster Abbey. Palácio de Buckingham com Troca da Guarda. Tower Bridge e Tower of London com as Joias da Coroa." },
                 { date: "01 out.", title: "Compras, Cultura & Notting Hill", desc: "Oxford Street, Carnaby Street, Covent Garden. Casas pastéis de Notting Hill, Portobello Road Market. Thames Walk ao entardecer. Jantar de despedida britânico." },
                 { date: "02 out.", title: "Partida para Bélgica", desc: "Voo British Airways BA 386 · Heathrow 13:55 → Bruxelas 16:10 (1h15min). Check-in em Bruxelas, Grand Place à noite — uma das praças mais belas da Europa." },

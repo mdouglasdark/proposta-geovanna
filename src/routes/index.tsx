@@ -230,8 +230,8 @@ function Index() {
             {
               dest: "Roma & Vaticano", color: "#5c3d2e",
               days: [
-                { date: "15 set.", title: "City Tour em Roma — Em Grupo", desc: "Tour a pé em grupo, guia em português: Fontana di Trevi, Piazza Navona, Campo de' Fiori. Jantar em Trastevere." },
-                { date: "16 set.", title: "City Tour + Coliseu (Arena)", desc: "Tour Arena Roma Imperial em grupo: entrada rápida no Coliseu, pisando na arena onde os gladiadores lutavam, arquibancadas, Fórum Romano e Palatino. Guia oficial em português." },
+                { date: "15 set.", title: "Chegada a Roma", desc: "Chegada vinda de Pisa e check-in. Tarde livre: Piazza Navona, Campo de' Fiori. Jantar em Trastevere." },
+                { date: "16 set.", title: "City Tour + Coliseu (Arena) — Em Grupo", desc: "Tour a pé em grupo pela cidade: Fontana di Trevi e centro histórico. Tour Arena Roma Imperial em grupo: entrada rápida no Coliseu, pisando na arena onde os gladiadores lutavam, arquibancadas, Fórum Romano e Palatino. Guia oficial em português." },
                 { date: "17 set.", title: "Vaticano + Dia Livre", desc: "Tour Vaticano em grupo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro. Guia oficial em português. Tarde livre: Castelo de Sant'Angelo, bairro Prati." },
                 { date: "18 set.", title: "Partida para Veneza", desc: "Italo 8916 · Roma Tiburtina 12:58 → Venice Mestre 16:42 (3h44min). Traslado de barco-táxi ao hotel." },
               ]
@@ -344,7 +344,7 @@ function Index() {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {[
-            { icon: "🏟", label: "Roma", title: "City Tour em Roma — Em Grupo", desc: "Fontana di Trevi, Piazza Navona, Campo de' Fiori · guia em português · 15 set." },
+            { icon: "🏟", label: "Roma", title: "City Tour em Roma — Em Grupo", desc: "Fontana di Trevi, Piazza Navona, Campo de' Fiori · guia em português · 16 set." },
             { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Em Grupo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
             { icon: "⛪", label: "Roma", title: "Tour Vaticano — Em Grupo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 17 set." },
             { icon: "🚣", label: "Veneza", title: "City Tour a Pé Privado — Cidade das Águas", desc: "Ponte de Rialto, Praça São Marcos e bairros autênticos pouco explorados · guia em português · ~3h · 19 set." },

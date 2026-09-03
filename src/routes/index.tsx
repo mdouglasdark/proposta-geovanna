@@ -125,9 +125,9 @@ function Index() {
             { dest: "St. Moritz", hotel: "Hotel Reine Victoria", stars: 4, addr: "Via Rosatsch 18", checkin: "22 set. · 15:00", checkout: "24 set. · 07:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Berna", hotel: "Hotel Savoy Bern", stars: 4, addr: "Neuengasse 26", checkin: "24 set. · 15:00", checkout: "25 set. · 11:00", noites: "1 noite", extras: "Café da manhã incluso" },
             { dest: "Zurique", hotel: "Mercure Zürich City", stars: 4, addr: "Vulkanstrasse 108b", checkin: "25 set. · 15:00", checkout: "28 set. · 12:00", noites: "3 noites", extras: "Café da manhã incluso" },
-            { dest: "Londres", hotel: "Park Plaza County Hall London", stars: 4, addr: "1 Addington Street", checkin: "28 set. · 15:00", checkout: "02 out. · 12:00", noites: "4 noites", extras: "Café da manhã incluso" },
-            { dest: "Bélgica", hotel: "a confirmar", stars: 4, addr: "Bruxelas · centro", checkin: "02 out. · 15:00", checkout: "04 out. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
-            { dest: "Amsterdam", hotel: "a confirmar", stars: 4, addr: "Amsterdam · centro", checkin: "04 out. · 15:00", checkout: "07 out. · 11:00", noites: "3 noites", extras: "Café da manhã incluso" },
+            { dest: "Londres", hotel: "Pullman London St Pancras", stars: 4, addr: "100-110 Euston Road", checkin: "28 set. · 15:00", checkout: "02 out. · 12:00", noites: "4 noites", extras: "Café da manhã incluso" },
+            { dest: "Bélgica", hotel: "Hotel Le Plaza Brussels", stars: 4, addr: "Bd Adolphe Max Laan 118-126", checkin: "02 out. · 16:00", checkout: "04 out. · 12:00", noites: "2 noites", extras: "Café da manhã incluso" },
+            { dest: "Amsterdam", hotel: "NH City Centre Amsterdam", stars: 4, addr: "Spuistraat 288-292", checkin: "04 out. · 15:00", checkout: "07 out. · 12:00", noites: "3 noites", extras: "Buffet de café da manhã incluso" },
             { dest: "Paris", hotel: "Mercure Paris Centre Tour Eiffel", stars: 4, addr: "20 Rue Jean Rey", checkin: "07 out. · 15:00", checkout: "11 out. · 12:00", noites: "4 noites", extras: "Café da manhã incluso" },
           ].map(({ dest, hotel, stars, addr, checkin, checkout, noites, extras }) => (
             <div key={dest} style={{ borderRadius: 8, border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)", padding: "20px 18px" }}>
@@ -261,7 +261,7 @@ function Index() {
                 { date: "25 set.", title: "Zurique — Chegada & Tarde", desc: "Altstadt com o Grossmünster do séc. XII. Bahnhofstrasse: 1,4km de joalherias e relógios exclusivos. Lago de Zurique com vista dos Alpes." },
                 { date: "26 set.", title: "Day Trip — Jungfraujoch, o Topo da Europa", desc: "Passeio de 12h saindo de Zurique: ônibus até Interlaken e Grindelwald, teleférico Eiger Express + trem cremalheira até Jungfraujoch (3.400m, a estação ferroviária mais alta da Europa). Patrimônio Mundial UNESCO — vistas dos picos Eiger, Mönch e Jungfrau, Mirante Sphinx, Palácio de Gelo e Glaciar Aletsch. ~2h30 livres no topo. Retorno via Lauterbrunnen." },
                 { date: "27 set.", title: "Zurique — Dia Livre", desc: "Museu Nacional Suíço (castelo neogótico), Lindenhügel (vista panorâmica), bairro de Wiedikon. Última noite na Suíça." },
-                { date: "28 set.", title: "Partida para Londres", desc: "Voo SWISS LX 432 · Zurique 17:10 → London Gatwick 17:50 (direto, 1h40min). Chegada a Londres e check-in no Park Plaza County Hall." },
+                { date: "28 set.", title: "Partida para Londres", desc: "Voo SWISS LX 432 · Zurique 17:10 → London Gatwick 17:50 (direto, 1h40min). Chegada a Londres e check-in no Pullman London St Pancras." },
               ]
             },
             {
@@ -375,18 +375,18 @@ function Index() {
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Cartão de crédito</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>até 12x sem juros</p>
             <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#f0ede8", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
-              12x R$ 3.703,33
+              12x R$ 5.607,19
             </p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 44.439,95 por pessoa</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 67.286,29 por pessoa</p>
           </div>
           <div style={{ padding: "36px 32px", borderRadius: 12, border: "1px solid rgba(201,169,110,0.6)", background: "rgba(201,169,110,0.10)", textAlign: "center", position: "relative" }}>
             <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: "#c9a96e", color: "#0e0e12", fontSize: 10, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", padding: "4px 14px", borderRadius: 20, fontFamily: "'Jost', sans-serif", whiteSpace: "nowrap" }}>Melhor opção</div>
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Pix à vista</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>desconto exclusivo</p>
             <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#c9a96e", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
-              R$ 39.671,40
+              R$ 59.309,20
             </p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 4.768,55</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 7.977,09</p>
           </div>
         </div>
         <p className="font-body" style={{ textAlign: "center", fontSize: 11, color: "rgba(240,237,232,0.35)", lineHeight: 1.7 }}>

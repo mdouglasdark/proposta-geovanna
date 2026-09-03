@@ -85,9 +85,9 @@ function Index() {
             { name: "Veneza", dates: "18–20 set.", nights: "2 noites", img: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=400&q=70", desc: "Gôndolas, pontes históricas e a magia única da cidade sobre a água." },
             { name: "Milão", dates: "20–22 set.", nights: "2 noites", img: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=400&q=70", desc: "Capital da moda e do design. Duomo, Galleria Vittorio Emanuele II e porta de entrada para os Alpes." },
             { name: "St. Moritz", dates: "22–24 set.", nights: "2 noites", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=70", desc: "Chegada pela lendária Linha do Bernina. Aldeia alpina a 1.856m, neve, lagos e céu estrelado." },
-            { name: "Berna", dates: "24–25 set.", nights: "1 noite", img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400&q=70", desc: "Capital suíça medieval, cidade velha com arcadas medievais e relógio astronômico do séc. XIII." },
-            { name: "Zurique", dates: "25–28 set.", nights: "3 noites", img: "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=400&q=70", desc: "Cidade medieval às margens do Limmat. Bahnhofstrasse, Lago de Zurique e day trip a Jungfraujoch, o 'Topo da Europa'." },
-            { name: "Londres", dates: "28 set.–02 out.", nights: "4 noites", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=70", desc: "Big Ben, Tower Bridge, West End, lojinhas e a vida urbana britânica." },
+            { name: "Berna", dates: "24–26 set.", nights: "2 noites", img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400&q=70", desc: "Capital suíça medieval, cidade velha com arcadas medievais. Excursão a Interlaken, Lauterbrunnen e Blausee." },
+            { name: "Zurique", dates: "26–29 set.", nights: "3 noites", img: "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=400&q=70", desc: "Cidade medieval às margens do Limmat. Jungfraujoch (Topo da Europa), Monte Titlis + Lucerna e Fábrica da Lindt." },
+            { name: "Londres", dates: "29 set.–02 out.", nights: "3 noites", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=70", desc: "Big Ben, Tower Bridge, West End, lojinhas e a vida urbana britânica." },
             { name: "Bélgica", dates: "02–04 out.", nights: "2 noites", img: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=400&q=70", desc: "Bruxelas: Grand Place, Atomium, chocolate artesanal e a vibrante cidade capital da Europa." },
             { name: "Amsterdam", dates: "04–07 out.", nights: "3 noites", img: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=400&q=70", desc: "Canais, Rijksmuseum, Casa de Anne Frank e o charme único da capital holandesa." },
             { name: "Paris", dates: "07–11 out.", nights: "4 noites", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&q=70", desc: "Torre Eiffel, Louvre, Champs-Élysées e 2 dias de pura magia na Disneyland. Encerramento." },
@@ -124,9 +124,9 @@ function Index() {
             { dest: "Veneza", hotel: "Avani Rio Novo Venice Hotel", stars: 4, addr: "Calle Larga Ragusei, Dorsoduro 3489", checkin: "18 set. · 15:00", checkout: "20 set. · 12:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Milão", hotel: "Hotel Bernina", stars: 3, addr: "Via Napo Torriani 27", checkin: "20 set. · 14:00", checkout: "22 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "St. Moritz", hotel: "Hotel Reine Victoria", stars: 4, addr: "Via Rosatsch 18", checkin: "22 set. · 15:00", checkout: "24 set. · 07:00", noites: "2 noites", extras: "Café da manhã incluso" },
-            { dest: "Berna", hotel: "Hotel Savoy Bern", stars: 4, addr: "Neuengasse 26", checkin: "24 set. · 15:00", checkout: "25 set. · 11:00", noites: "1 noite", extras: "Café da manhã incluso" },
-            { dest: "Zurique", hotel: "Mercure Zürich City", stars: 4, addr: "Vulkanstrasse 108b", checkin: "25 set. · 15:00", checkout: "28 set. · 12:00", noites: "3 noites", extras: "Café da manhã incluso" },
-            { dest: "Londres", hotel: "Pullman London St Pancras", stars: 4, addr: "100-110 Euston Road", checkin: "28 set. · 15:00", checkout: "02 out. · 12:00", noites: "4 noites", extras: "Café da manhã incluso" },
+            { dest: "Berna", hotel: "Hotel Savoy Bern", stars: 4, addr: "Neuengasse 26", checkin: "24 set. · 15:00", checkout: "26 set. · 11:00", noites: "2 noites", extras: "Café da manhã incluso" },
+            { dest: "Zurique", hotel: "Mercure Zürich City", stars: 4, addr: "Vulkanstrasse 108b", checkin: "26 set. · 15:00", checkout: "29 set. · 12:00", noites: "3 noites", extras: "Café da manhã incluso" },
+            { dest: "Londres", hotel: "Pullman London St Pancras", stars: 4, addr: "100-110 Euston Road", checkin: "29 set. · 15:00", checkout: "02 out. · 12:00", noites: "3 noites", extras: "Café da manhã incluso" },
             { dest: "Bélgica", hotel: "Hotel Le Plaza Brussels", stars: 4, addr: "Bd Adolphe Max Laan 118-126", checkin: "02 out. · 16:00", checkout: "04 out. · 12:00", noites: "2 noites", extras: "Café da manhã incluso" },
             { dest: "Amsterdam", hotel: "NH City Centre Amsterdam", stars: 4, addr: "Spuistraat 288-292", checkin: "04 out. · 15:00", checkout: "07 out. · 12:00", noites: "3 noites", extras: "Buffet de café da manhã incluso" },
             { dest: "Paris", hotel: "Mercure Paris Centre Tour Eiffel", stars: 4, addr: "20 Rue Jean Rey", checkin: "07 out. · 15:00", checkout: "11 out. · 12:00", noites: "4 noites", extras: "Café da manhã incluso" },
@@ -169,10 +169,13 @@ function Index() {
             { tipo: "🚄", label: "Trem Alta Velocidade", trecho: "Veneza → Milão", data: "Dom., 20 set.", horario: "13:57 → 16:25", operadora: "Italo · Nº 8984 · Venezia S. Lucia → Milano Centrale · 2h28min" },
             { tipo: "🚄", label: "Trem Regional", trecho: "Milão → Tirano", data: "Ter., 22 set.", horario: "11:20 → 13:52", operadora: "Trenord · Nº 2822 · Milano Centrale → Tirano · 2h32min", alerta: "⚠ Atenção: chegada em Tirano às 13:52 (estação Trenord/FS italiana) — o Bernina Express parte às 16:06 de uma estação diferente (estação RhB, ferrovia suíça). São ~2h14min livres em Tirano: aproveite para almoçar e caminhar até a estação RhB (a poucos minutos a pé, bem sinalizada, seguir placas 'Ferrovia Retica / Bernina Express'). Recomendado chegar à plataforma RhB com pelo menos 20 min de antecedência." },
             { tipo: "🏔", label: "Bernina Express · UNESCO", trecho: "Tirano → St. Moritz", data: "Ter., 22 set.", horario: "16:06 → 18:25", operadora: "Ferrovia Rética · Nº 976 · travessia alpina a 2.253m · 2h19min", alerta: "Embarque na estação RhB (Ferrovia Rética) de Tirano — diferente da estação onde desembarcaram do trem Trenord vindo de Milão." },
+            { tipo: "🚌", label: "Roteiro Panorâmico", trecho: "Engadina", data: "Qua., 23 set.", horario: "em St. Moritz", operadora: "Lago Silvaplana, Lago Sils/Sils Maria e Passo Maloja (Mirante Alpino) — a mais bela paisagem lacustre dos Alpes suíços" },
             { tipo: "🚄", label: "Trem", trecho: "St. Moritz → Berna", data: "Qui., 24 set.", horario: "13:47 → 17:58", operadora: "SBB · via Landquart + Zurique · 4h11min", alerta: "⚠ Trajeto com 2 baldeações, cada conexão com apenas 9 minutos — passo a passo: (1) Embarcar em St. Moritz às 13:47. (2) Desembarcar em Landquart, verificar o número da plataforma no painel da estação assim que descer (muda conforme o dia) e seguir direto para o próximo trem — 9 min de conexão, sem tempo para parar. (3) Desembarcar em Zürich HB, novamente checar plataforma no painel eletrônico ao descer e seguir rápido — mais 9 min de conexão. (4) Chegada em Berna às 17:58. Dica: viajar com bagagem de mão leve e próxima ao corpo agiliza a troca; os horários e plataformas exatos de cada conexão estão nos bilhetes emitidos pela SBB." },
-            { tipo: "🚄", label: "Trem Direto", trecho: "Berna → Zurique", data: "Sex., 25 set.", horario: "13:31 → 14:41", operadora: "SBB · IC 1 · Bern → Zürich HB · direto · 1h10min" },
-            { tipo: "🚌🚠", label: "Day Trip", trecho: "Jungfraujoch — Topo da Europa", data: "Sáb., 26 set.", horario: "12 horas · saída de Zurique", operadora: "Zurique → Interlaken → Grindelwald → Eiger Express + trem cremalheira → Jungfraujoch (3.400m) → Lauterbrunnen → Zurique" },
-            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Seg., 28 set.", horario: "17:10 → 17:50", operadora: "SWISS · LX 432 · ZRH → London Gatwick (LGW) · direto · 1h40min" },
+            { tipo: "🚌", label: "Excursão", trecho: "Interlaken, Lauterbrunnen & Blausee", data: "Sex., 25 set.", horario: "saída de Berna", operadora: "Excursão saindo de Berna — cidade de Interlaken entre os lagos Thun e Brienz, vilarejo alpino de Lauterbrunnen e o Lago Azul (Blausee)" },
+            { tipo: "🚠", label: "Day Trip", trecho: "Jungfraujoch — Topo da Europa", data: "Sáb., 26 set.", horario: "saída de Berna, chegada em Zurique", operadora: "Berna → Grindelwald → Eiger Express + trem cremalheira → Jungfraujoch (3.400m) → descida direto para Zurique (sem retorno a Berna) · check-in no hotel em Zurique à noite" },
+            { tipo: "🚌", label: "Excursão", trecho: "Monte Titlis & Lucerna", data: "Dom., 27 set.", horario: "saída de Zurique", operadora: "Teleférico rotativo até o Monte Titlis (3.020m, neve o ano todo) + tarde na charmosa Lucerna, Ponte da Capela e Leão de Lucerna" },
+            { tipo: "🍫", label: "Passeio", trecho: "Fábrica da Lindt & Compras", data: "Seg., 28 set.", horario: "em Zurique", operadora: "Lindt Home of Chocolate + tarde livre para compras na Bahnhofstrasse" },
+            { tipo: "✈", label: "Voo", trecho: "Zurique → Londres", data: "Ter., 29 set.", horario: "a confirmar", operadora: "voo + transfer privativo ao aeroporto · ZRH → Londres" },
             { tipo: "✈", label: "Voo", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "13:55 → 16:10", operadora: "British Airways · BA 386 · LHR → BRU · 1h15min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
@@ -226,8 +229,8 @@ function Index() {
               dest: "Roma & Vaticano", color: "#5c3d2e",
               days: [
                 { date: "15 set.", title: "Roma Antiga à Tarde", desc: "Fontana di Trevi, Piazza Navona, Campo de' Fiori. Jantar em Trastevere." },
-                { date: "16 set.", title: "Coliseu — Tour Semi-Privativo", desc: "Tour Arena Roma Imperial semi-privativo: entrada rápida no Coliseu, pisando na arena onde os gladiadores lutavam, arquibancadas, Fórum Romano e Palatino. Guia oficial em português." },
-                { date: "17 set.", title: "Vaticano — Tour Semi-Privativo", desc: "Tour Vaticano semi-privativo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro. Guia oficial em português. Tarde livre: Castelo de Sant'Angelo, bairro Prati." },
+                { date: "16 set.", title: "City Tour + Coliseu (Arena)", desc: "Tour Arena Roma Imperial em grupo: entrada rápida no Coliseu, pisando na arena onde os gladiadores lutavam, arquibancadas, Fórum Romano e Palatino. Guia oficial em português." },
+                { date: "17 set.", title: "Vaticano + Dia Livre", desc: "Tour Vaticano em grupo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro. Guia oficial em português. Tarde livre: Castelo de Sant'Angelo, bairro Prati." },
                 { date: "18 set.", title: "Partida para Veneza", desc: "Italo 8916 · Roma Tiburtina 12:58 → Venice Mestre 16:42 (3h44min). Traslado de barco-táxi ao hotel." },
               ]
             },
@@ -235,7 +238,7 @@ function Index() {
               dest: "Veneza", color: "#2e3f5c",
               days: [
                 { date: "18 set.", title: "Chegada a Veneza", desc: "Veneza: 118 ilhas, 400 pontes, sem carros. Jantar à beira da Piazza San Marco." },
-                { date: "19 set.", title: "Veneza Clássica & Ilhas", desc: "Basílica de São Marcos, Palazzo Ducale, gôndola pelos canais. Tarde: Murano (vidro) e Burano (casinhas coloridas)." },
+                { date: "19 set.", title: "City Tour — Passeio a Pé pela Cidade das Águas", desc: "Tour a pé guiado em português (~3h): Ponte de Rialto com seus mercados e vistas deslumbrantes, Praça São Marcos e a Basílica, além de bairros residenciais autênticos e becos pouco explorados pelos turistas. Tarde livre: Palazzo Ducale, gôndola pelos canais." },
                 { date: "20 set.", title: "Partida para Milão", desc: "Italo 8984 · Venezia S. Lucia 13:57 → Milano Centrale 16:25 (2h28min). Passeio noturno no Navigli." },
               ]
             },
@@ -243,7 +246,7 @@ function Index() {
               dest: "Milão", color: "#5c4a2e",
               days: [
                 { date: "20 set.", title: "Chegada a Milão — Navigli", desc: "Canais históricos do séc. XV, aperitivo milanês com petiscos gratuitos a partir das 18h." },
-                { date: "21 set.", title: "Milão Clássico", desc: "Duomo di Milano (135 torres), Galleria Vittorio Emanuele II, Brera, La Scala." },
+                { date: "21 set.", title: "City Tour — Passeio a Pé pela Cidade da Fashion Week", desc: "Tour privado a pé (4h) guiado em português: Catedral do Duomo (135 torres), Galeria Vittorio Emanuele II, Castelo Sforzesco, Praça Gae Aulenti, Bosco Verticale e o charmoso calçadão da Corso Garibaldi." },
                 { date: "22 set.", title: "Partida pela Linha do Bernina", desc: "Trenord 2822 · Milano Centrale 11:20 → Tirano 13:52. Visita ao Santuário de Tirano. Bernina Express 976 · 16:06 → St. Moritz 18:25." },
               ]
             },
@@ -251,33 +254,32 @@ function Index() {
               dest: "St. Moritz · Bernina Express", color: "#4a5c6a",
               days: [
                 { date: "22 set.", title: "Bernina Express — Topo dos Alpes", desc: "Patrimônio Mundial UNESCO. O trem sobe a 2.253m entre geleiras e viadutos em espiral. Chegada a St. Moritz. Jantar no resort alpino mais famoso do mundo." },
-                { date: "23 set.", title: "St. Moritz Livre", desc: "Lago St. Moritz, Engadin Walking Trail, lojas de grife. A cidade que inventou o turismo de inverno em 1864." },
+                { date: "23 set.", title: "Roteiro Panorâmico pela Engadina", desc: "Lago Silvaplana, Lago Sils/Sils Maria e Passo Maloja (Mirante Alpino) — a região lacustre mais bonita dos Alpes suíços. A cidade que inventou o turismo de inverno em 1864." },
                 { date: "24 set.", title: "Partida para Berna", desc: "SBB RegioExpress 1346 · St. Moritz 13:47 → Berna 17:58 via Landquart e Zurique (4h11min)." },
               ]
             },
             {
               dest: "Berna", color: "#5c5c3a",
               days: [
-                { date: "24 set.", title: "Chegada a Berna", desc: "Capital federal da Suíça — Patrimônio UNESCO. Cidade velha com 6km de arcadas medievais do séc. XIII. Check-in e jantar na Altstadt." },
-                { date: "25 set.", title: "Berna & Partida para Zurique", desc: "Manhã: Zytglogge (Torre do Relógio de 1218), Bärengraben (fosso dos ursos). Trem SBB IC 1 · Berna 13:31 → Zürich HB 14:41 (direto, 1h10min). Check-in em Zurique." },
+                { date: "24 set.", title: "Chegada a Berna", desc: "Capital federal da Suíça — Patrimônio UNESCO. Cidade velha com 6km de arcadas medievais do séc. XIII. Zytglogge (Torre do Relógio de 1218), Bärengraben (fosso dos ursos). Check-in e jantar na Altstadt." },
+                { date: "25 set.", title: "Excursão — Interlaken, Lauterbrunnen & Blausee", desc: "Interlaken, entre os lagos Thun e Brienz. Lauterbrunnen, vilarejo alpino cercado por cachoeiras. Blausee, o Lago Azul de águas cristalinas em meio à floresta." },
               ]
             },
             {
               dest: "Zurique", color: "#4a4a6a",
               days: [
-                { date: "25 set.", title: "Zurique — Chegada & Tarde", desc: "Altstadt com o Grossmünster do séc. XII. Bahnhofstrasse: 1,4km de joalherias e relógios exclusivos. Lago de Zurique com vista dos Alpes." },
-                { date: "26 set.", title: "Day Trip — Jungfraujoch, o Topo da Europa", desc: "Passeio de 12h saindo de Zurique: ônibus até Interlaken e Grindelwald, teleférico Eiger Express + trem cremalheira até Jungfraujoch (3.400m, a estação ferroviária mais alta da Europa). Patrimônio Mundial UNESCO — vistas dos picos Eiger, Mönch e Jungfrau, Mirante Sphinx, Palácio de Gelo e Glaciar Aletsch. ~2h30 livres no topo. Retorno via Lauterbrunnen." },
-                { date: "27 set.", title: "Zurique — Dia Livre", desc: "Museu Nacional Suíço (castelo neogótico), Lindenhügel (vista panorâmica), bairro de Wiedikon. Última noite na Suíça." },
-                { date: "28 set.", title: "Partida para Londres", desc: "Voo SWISS LX 432 · Zurique 17:10 → London Gatwick 17:50 (direto, 1h40min). Chegada a Londres e check-in no Pullman London St Pancras." },
+                { date: "26 set.", title: "Jungfraujoch — Topo da Europa (saindo de Berna)", desc: "Saída de Berna rumo a Grindelwald, teleférico Eiger Express + trem cremalheira até Jungfraujoch (3.400m, a estação ferroviária mais alta da Europa). Patrimônio Mundial UNESCO — vistas dos picos Eiger, Mönch e Jungfrau, Mirante Sphinx, Palácio de Gelo e Glaciar Aletsch. ~2h30 livres no topo. Descida direto para Zurique (sem retorno a Berna) e check-in no hotel à noite." },
+                { date: "27 set.", title: "Excursão — Monte Titlis & Lucerna", desc: "Teleférico rotativo até o Monte Titlis (3.020m, neve o ano todo). Tarde na charmosa Lucerna: Ponte da Capela e o monumento do Leão de Lucerna." },
+                { date: "28 set.", title: "Zurique & Fábrica da Lindt", desc: "Lindt Home of Chocolate — maior fábrica-museu de chocolate do mundo. Tarde livre para compras na Bahnhofstrasse. Última noite na Suíça." },
+                { date: "29 set.", title: "Partida para Londres", desc: "Transfer privativo ao aeroporto de Zurique. Voo para Londres (a confirmar) e check-in no Pullman London St Pancras." },
               ]
             },
             {
               dest: "Londres", color: "#3a5c3a",
               days: [
-                { date: "28 set.", title: "Chegada a Londres", desc: "Desembarque em Gatwick às 17:50 e traslado ao hotel. Noite livre: South Bank e London Eye iluminado às margens do Tâmisa." },
-                { date: "29 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Westminster Abbey. Palácio de Buckingham com Troca da Guarda. Tower Bridge e Tower of London com as Joias da Coroa." },
-                { date: "30 set.", title: "Compras & Cultura", desc: "Oxford Street, Carnaby Street, Covent Garden. British Museum ou National Gallery (museus gratuitos)." },
-                { date: "01 out.", title: "Notting Hill", desc: "Casas pastéis, Portobello Road Market (maior mercado de antiguidades do mundo). Thames Walk ao entardecer. Jantar de despedida britânico." },
+                { date: "29 set.", title: "Chegada a Londres", desc: "Traslado ao hotel e check-in no Pullman London St Pancras. Noite livre: South Bank e London Eye iluminado às margens do Tâmisa." },
+                { date: "30 set.", title: "Londres Clássico", desc: "Big Ben, Casas do Parlamento, Westminster Abbey. Palácio de Buckingham com Troca da Guarda. Tower Bridge e Tower of London com as Joias da Coroa." },
+                { date: "01 out.", title: "Compras, Cultura & Notting Hill", desc: "Oxford Street, Carnaby Street, Covent Garden. Casas pastéis de Notting Hill, Portobello Road Market. Thames Walk ao entardecer. Jantar de despedida britânico." },
                 { date: "02 out.", title: "Partida para Bélgica", desc: "Voo British Airways BA 386 · Heathrow 13:55 → Bruxelas 16:10 (1h15min). Check-in em Bruxelas, Grand Place à noite — uma das praças mais belas da Europa." },
               ]
             },
@@ -340,8 +342,14 @@ function Index() {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {[
-            { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Semi-Privativo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
-            { icon: "⛪", label: "Roma", title: "Tour Vaticano — Semi-Privativo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 17 set." },
+            { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Em Grupo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
+            { icon: "⛪", label: "Roma", title: "Tour Vaticano — Em Grupo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 17 set." },
+            { icon: "🚣", label: "Veneza", title: "City Tour a Pé — Cidade das Águas", desc: "Ponte de Rialto, Praça São Marcos e bairros autênticos pouco explorados · guia em português · ~3h · 19 set." },
+            { icon: "🏙", label: "Milão", title: "City Tour a Pé Privativo — Fashion Week", desc: "Duomo, Galeria Vittorio Emanuele II, Castelo Sforzesco, Bosco Verticale · guia em português · 4h · 21 set." },
+            { icon: "🏔", label: "St. Moritz", title: "Roteiro Panorâmico pela Engadina", desc: "Lago Silvaplana, Lago Sils/Sils Maria, Passo Maloja · 23 set." },
+            { icon: "🚌", label: "Berna", title: "Excursão Interlaken, Lauterbrunnen & Blausee", desc: "Interlaken, vilarejo de Lauterbrunnen e o Lago Azul (Blausee) · 25 set." },
+            { icon: "🚠", label: "Zurique", title: "Monte Titlis & Lucerna", desc: "Teleférico rotativo até 3.020m + tarde em Lucerna · 27 set." },
+            { icon: "🍫", label: "Zurique", title: "Fábrica da Lindt & Compras", desc: "Lindt Home of Chocolate + tarde livre na Bahnhofstrasse · 28 set." },
             { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · dia 08/10 (Disneyland Park) com guia especializada — roteiro de atrações, otimização de filas, logística do dia" },
             { icon: "🗼", label: "Paris", title: "Tour Primeira Vez em Paris", desc: "Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmides do Louvre, Tulherias e Palais Royal · guiado · 4h · 10 out." },
             { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura Europa (53 países) + 70 países no total" },

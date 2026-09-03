@@ -376,20 +376,20 @@ function Index() {
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Cartão de crédito</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>até 12x sem juros</p>
             <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#f0ede8", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
-              12x R$ 5.723,86
+              12x R$ 5.878,11
             </p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 68.686,29 por pessoa</p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)", marginTop: 4 }}>Total 2 pessoas: R$ 137.372,58</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>= R$ 70.537,27 por pessoa</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)", marginTop: 4 }}>Total 2 pessoas: R$ 141.074,54</p>
           </div>
           <div style={{ padding: "36px 32px", borderRadius: 12, border: "1px solid rgba(201,169,110,0.6)", background: "rgba(201,169,110,0.10)", textAlign: "center", position: "relative" }}>
             <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: "#c9a96e", color: "#0e0e12", fontSize: 10, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", padding: "4px 14px", borderRadius: 20, fontFamily: "'Jost', sans-serif", whiteSpace: "nowrap" }}>Melhor opção</div>
             <p className="font-body" style={{ fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c9a96e", marginBottom: 16 }}>Pix à vista</p>
             <p className="font-body" style={{ fontSize: 13, color: "rgba(240,237,232,0.5)", marginBottom: 8 }}>desconto exclusivo</p>
             <p className="font-body" style={{ fontSize: 38, fontWeight: 600, color: "#c9a96e", lineHeight: 1.1, marginBottom: 4, letterSpacing: "-0.02em" }}>
-              R$ 60.709,20
+              R$ 62.174,77
             </p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 7.977,09</p>
-            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)", marginTop: 4 }}>Total 2 pessoas: R$ 121.418,40</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)" }}>por pessoa · economia de R$ 8.362,50</p>
+            <p className="font-body" style={{ fontSize: 12, color: "rgba(240,237,232,0.4)", marginTop: 4 }}>Total 2 pessoas: R$ 124.349,53</p>
           </div>
         </div>
         <p className="font-body" style={{ textAlign: "center", fontSize: 11, color: "rgba(240,237,232,0.35)", lineHeight: 1.7 }}>

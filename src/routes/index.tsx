@@ -88,7 +88,7 @@ function Index() {
             { name: "Berna", dates: "24–25 set.", nights: "1 noite", img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400&q=70", desc: "Capital suíça medieval, cidade velha com arcadas medievais e relógio astronômico do séc. XIII." },
             { name: "Zurique", dates: "25–28 set.", nights: "3 noites", img: "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=400&q=70", desc: "Cidade medieval às margens do Limmat. Bahnhofstrasse, Lago de Zurique e day trip a Jungfraujoch, o 'Topo da Europa'." },
             { name: "Londres", dates: "28 set.–02 out.", nights: "4 noites", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=70", desc: "Big Ben, Tower Bridge, West End, lojinhas e a vida urbana britânica." },
-            { name: "Bélgica", dates: "02–04 out.", nights: "2 noites", img: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=400&q=70", desc: "Bruxelas com a Grand Place + day trip para Bruges, a cidade medieval dos canais." },
+            { name: "Bélgica", dates: "02–04 out.", nights: "2 noites", img: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=400&q=70", desc: "Bruxelas: Grand Place, Atomium, chocolate artesanal e a vibrante cidade capital da Europa." },
             { name: "Amsterdam", dates: "04–07 out.", nights: "3 noites", img: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=400&q=70", desc: "Canais, Rijksmuseum, Casa de Anne Frank e o charme único da capital holandesa." },
             { name: "Paris", dates: "07–11 out.", nights: "4 noites", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&q=70", desc: "Torre Eiffel, Louvre, Champs-Élysées e 2 dias de pura magia na Disneyland. Encerramento." },
           ].map(({ name, dates, nights, img, desc }) => (
@@ -219,8 +219,8 @@ function Index() {
               dest: "Roma & Vaticano", color: "#5c3d2e",
               days: [
                 { date: "15 set.", title: "Roma Antiga à Tarde", desc: "Fontana di Trevi, Piazza Navona, Campo de' Fiori. Jantar em Trastevere." },
-                { date: "16 set.", title: "Vaticano & Coliseu — Tours Semi-Privativos", desc: "Tour Vaticano semi-privativo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro, guia oficial em português. Tour Arena Roma Imperial semi-privativo: entrada rápida no Coliseu, arquibancadas, Fórum Romano e Palatino." },
-                { date: "17 set.", title: "Roma Livre", desc: "Villa Borghese, Castelo de Sant'Angelo, bairro Prati. Jantar de despedida romano." },
+                { date: "16 set.", title: "Coliseu — Tour Semi-Privativo", desc: "Tour Arena Roma Imperial semi-privativo: entrada rápida no Coliseu, pisando na arena onde os gladiadores lutavam, arquibancadas, Fórum Romano e Palatino. Guia oficial em português." },
+                { date: "17 set.", title: "Vaticano — Tour Semi-Privativo", desc: "Tour Vaticano semi-privativo: Museus Vaticanos, Capela Sistina, Basílica de São Pedro. Guia oficial em português. Tarde livre: Castelo de Sant'Angelo, bairro Prati." },
                 { date: "18 set.", title: "Partida para Veneza", desc: "Italo 8916 · Roma Tiburtina 12:58 → Venice Mestre 16:42 (3h44min). Traslado de barco-táxi ao hotel." },
               ]
             },
@@ -278,7 +278,7 @@ function Index() {
               dest: "Bélgica", color: "#5c3a5c",
               days: [
                 { date: "02 out.", title: "Chegada a Bruxelas", desc: "Grand Place: praça gótica do séc. XVII, Patrimônio UNESCO. Manneken Pis. Cervejas belgas e chocolate artesanal nas galerias cobertas." },
-                { date: "03 out.", title: "Day Trip — Bruges", desc: "1h de trem. Bruges é a cidade medieval mais preservada da Europa: canais centenários, Igreja de Nossa Senhora (Michelangelo original), Mercado de Bruges, Minnewater (Lago do Amor). Jantar em Bruxelas." },
+                { date: "03 out.", title: "Bruxelas Livre", desc: "Atomium, bairro Sainte-Catherine, Mont des Arts, Catedral de São Miguel e Santa Gudula. Galerias Royales Saint-Hubert e as melhores waffles e chocolates da cidade." },
                 { date: "04 out.", title: "Partida para Amsterdam", desc: "Eurostar 9339 · Bruxelles-Midi 13:53 → Amsterdam Centraal 16:13 (direto, 2h20min). Check-in e primeira exploração dos canais holandeses." },
               ]
             },
@@ -295,7 +295,7 @@ function Index() {
               dest: "Paris", color: "#4a3a5c",
               days: [
                 { date: "07 out.", title: "Chegada a Paris", desc: "Check-in no Mercure Paris Centre Tour Eiffel, a poucos passos da Torre. Primeira noite parisiense com vista para o monumento mais icônico do mundo." },
-                { date: "08 out.", title: "Disneyland Paris — Dia 1", desc: "Disneyland Park: Castelo da Bela Adormecida, Fantasyland, Adventureland (Pirates of the Caribbean), Big Thunder Mountain. Fantasmic ao anoitecer." },
+                { date: "08 out.", title: "Disneyland Paris — Dia 1 (com Guia Especializada)", desc: "Disneyland Park com acompanhamento de guia especializada: melhores atrações, otimização de filas, logística do dia. Castelo da Bela Adormecida, Fantasyland, Adventureland (Pirates of the Caribbean), Big Thunder Mountain. Fantasmic ao anoitecer." },
                 { date: "09 out.", title: "Disneyland Paris — Dia 2", desc: "Walt Disney Studios Park: Avengers Campus, Star Wars: Rise of the Resistance, shows noturnos com fogos e projeção mapeada." },
                 { date: "10 out.", title: "Paris Clássico & Compras", desc: "Tour guiado 'Primeira Vez em Paris' (4h): Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmide do Louvre, Jardim das Tulherias e Palais Royal. Louvre (Mona Lisa, Vênus de Milo), Montmartre e Sacré-Cœur à tarde." },
                 { date: "11 out.", title: "Encerramento — Paris", desc: "Manhã livre na cidade mais visitada do mundo. Último café parisiense, últimas fotos. Voo de retorno LATAM LA 8133 · CDG 13:00 → GRU 19:50 (direto, 11h50min). Fim de uma jornada inesquecível." },
@@ -334,8 +334,8 @@ function Index() {
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {[
             { icon: "🏛", label: "Roma", title: "Tour Coliseu Arena — Semi-Privativo", desc: "Arena do Coliseu, arquibancadas, Fórum Romano e Palatino · guia oficial em português · 16 set." },
-            { icon: "⛪", label: "Roma", title: "Tour Vaticano — Semi-Privativo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 16 set." },
-            { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · acompanhamento com guia especializada (roteiro de atrações, otimização de filas, logística do dia)" },
+            { icon: "⛪", label: "Roma", title: "Tour Vaticano — Semi-Privativo", desc: "Museus Vaticanos, Capela Sistina, Basílica de São Pedro · guia oficial em português · 17 set." },
+            { icon: "🏰", label: "Disneyland Paris", title: "Ingresso 2 Dias · 2 Parques + Guia Especializada", desc: "Disneyland Park + Walt Disney Studios Park · 08–09 out. · 2 adultos · dia 08/10 (Disneyland Park) com guia especializada — roteiro de atrações, otimização de filas, logística do dia" },
             { icon: "🗼", label: "Paris", title: "Tour Primeira Vez em Paris", desc: "Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmides do Louvre, Tulherias e Palais Royal · guiado · 4h · 10 out." },
             { icon: "📶", label: "Conectividade", title: "Chip Internacional Global", desc: "12GB de internet · válido por 30 dias · cobertura Europa (53 países) + 70 países no total" },
             { icon: "🛡", label: "Seguro Viagem", title: "Seguro Viagem Internacional · DMH USD 150.000", desc: "Despesas médicas, hospitalares, odontológicas e farmacêuticas · cobre Covid-19, doenças pré-existentes e esportes amadores · perda/atraso/dano de bagagem · cancelamento e atraso de voo · traslado médico e regresso sanitário · assistência jurídica · válido pelos 30 dias da viagem" },

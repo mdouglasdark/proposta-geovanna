@@ -180,6 +180,7 @@ function Index() {
             { tipo: "✈", label: "Voo", trecho: "Londres → Bruxelas", data: "Sex., 02 out.", horario: "13:55 → 16:10", operadora: "British Airways · BA 386 · LHR → BRU · 1h15min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Bruxelas → Amsterdam", data: "Dom., 04 out.", horario: "13:53 → 16:13", operadora: "Eurostar · Nº 9339 · Bruxelles-Midi → Amsterdam Centraal · direto · 2h20min" },
             { tipo: "🚄", label: "Eurostar", trecho: "Amsterdam → Paris", data: "Qua., 07 out.", horario: "13:10 → 16:45", operadora: "Eurostar · Nº 9352 · Amsterdam Centraal → Paris Gare du Nord · direto · 3h35min" },
+            { tipo: "✈", label: "Voo · Geovanna", trecho: "Paris → Lisboa", data: "Dom., 11 out.", horario: "14:40 → 16:15", operadora: "TAP Air Portugal · TP 433 · Paris-Orly (ORY) → Lisboa (LIS) · direto · Airbus A321neo · 2h35min" },
             { tipo: "✈", label: "Voo Internacional · Retorno (amiga)", trecho: "Paris → São Paulo", data: "Dom., 11 out.", horario: "13:00 → 19:50", operadora: "LATAM · LA 8133 · CDG → GRU · direto · Boeing 787 · 11h50min" },
           ].map(({ tipo, label, trecho, data, horario, operadora, alerta }, i) => (
             <div key={i} style={{
@@ -309,7 +310,7 @@ function Index() {
                 { date: "08 out.", title: "Disneyland Paris — Dia 1 (com Guia Especializada)", desc: "Disneyland Park com acompanhamento de guia especializada: melhores atrações, otimização de filas, logística do dia. Castelo da Bela Adormecida, Fantasyland, Adventureland (Pirates of the Caribbean), Big Thunder Mountain. Fantasmic ao anoitecer." },
                 { date: "09 out.", title: "Disneyland Paris — Dia 2", desc: "Walt Disney Studios Park: Avengers Campus, Star Wars: Rise of the Resistance, shows noturnos com fogos e projeção mapeada." },
                 { date: "10 out.", title: "Paris Clássico & Compras", desc: "Tour guiado 'Primeira Vez em Paris' (4h): Torre Eiffel, Trocadéro, Arco do Triunfo, Champs-Élysées, Pirâmide do Louvre, Jardim das Tulherias e Palais Royal. Louvre (Mona Lisa, Vênus de Milo), Montmartre e Sacré-Cœur à tarde." },
-                { date: "11 out.", title: "Encerramento — Paris", desc: "Manhã livre na cidade mais visitada do mundo. Último café parisiense, últimas fotos. Voo de retorno LATAM LA 8133 · CDG 13:00 → GRU 19:50 (direto, 11h50min). Fim de uma jornada inesquecível." },
+                { date: "11 out.", title: "Encerramento — Paris", desc: "Manhã livre na cidade mais visitada do mundo. Último café parisiense, últimas fotos. Voo de Geovanna: TAP TP 433 · Paris-Orly 14:40 → Lisboa 16:15 (direto, 2h35min). Voo de retorno da amiga: LATAM LA 8133 · CDG 13:00 → GRU 19:50 (direto, 11h50min). Fim de uma jornada inesquecível." },
               ]
             },
           ].map(({ dest, color, days }) => (
